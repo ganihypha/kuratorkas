@@ -3,7 +3,7 @@
   // ============================================================
   // KURATORKAS × CURATOR.OS — Cloudflare Pages Configuration
   // Owner: Reza Estes / Haidar — Sovereign AI Dev
-  // Doctrine: Master-Architect v5.0 CANONICAL
+  // Doctrine: Master-Architect v5.0 CANONICAL | 2026-05-20
   // ============================================================
   "name": "kuratorkas",
   "compatibility_date": "2026-04-17",
@@ -14,15 +14,40 @@
     "ENVIRONMENT": "production",
     "APP_NAME": "KuratorKas",
     "APP_VERSION": "0.1.0"
+  },
+
+  // ============================================================
+  // D1 Database — Primary OLTP store (users, products, orders…)
+  //   Created via: npx wrangler d1 create kuratorkas
+  //   Migrations:  npx wrangler d1 migrations apply kuratorkas
+  // ============================================================
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "kuratorkas",
+      "database_id": "d9edc93c-be3c-44f4-811c-9f9955ff07fc"
+    }
+  ],
+
+  // ============================================================
+  // KV Namespace — Session cache, rate-limiting, trend snapshots
+  //   Created via: npx wrangler kv namespace create kuratorkas-kv
+  // ============================================================
+  "kv_namespaces": [
+    {
+      "binding": "KV",
+      "id": "3b2f8cb11b2942a5ac4aa3b1d4fabec1"
+    }
+  ],
+
+  // ============================================================
+  // Workers AI — Curator-OS multi-agent inference
+  // ============================================================
+  "ai": {
+    "binding": "AI"
   }
 
   // ----------------------------------------
-  // Bindings to be configured after Cloudflare project creation:
-  //   d1_databases  : run `npx wrangler d1 create kuratorkas-production`
-  //   kv_namespaces : run `npx wrangler kv namespace create kuratorkas-kv`
-  //   r2_buckets    : run `npx wrangler r2 bucket create kuratorkas-assets`
-  //   ai            : { "binding": "AI" }
-  //
   // SECRETS (set via `wrangler pages secret put ... --project-name kuratorkas`)
   //   JWT_SECRET, OPENAI_API_KEY, ANTHROPIC_API_KEY,
   //   SHOPEE_*, TOKOPEDIA_*, TIKTOK_SHOP_*, DUITKU_*
