@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "strict": true,
+    "skipLibCheck": true,
+    "lib": ["ESNext"],
+    "types": ["vite/client", "@cloudflare/workers-types"],
+    "jsx": "react-jsx",
+    "jsxImportSource": "hono/jsx",
+    "baseUrl": ".",
+    "paths": {
+      "@sparkmind/core": ["./packages/core/src/index.ts"],
+      "@sparkmind/core/*": ["./packages/core/src/*"],
+      "@sparkmind/auth": ["./packages/auth/src/index.ts"],
+      "@sparkmind/auth/*": ["./packages/auth/src/*"],
+      "@sparkmind/ui-kit": ["./packages/ui-kit/src/index.ts"],
+      "@sparkmind/ui-kit/*": ["./packages/ui-kit/src/*"],
+      "@sparkmind/curator-os": ["./packages/curator-os/src/index.ts"],
+      "@sparkmind/curator-os/*": ["./packages/curator-os/src/*"],
+      "@sparkmind/pg-router": ["./packages/pg-router/src/index.ts"],
+      "@sparkmind/analytics": ["./packages/analytics/src/index.ts"]
+    }
+  },
+  "include": ["src/**/*", "packages/**/*"],
+  "exclude": ["node_modules", "dist", "apps/sparkmind", "apps/barberkas", "apps/pacelokal", "apps/nurani"]
+}

@@ -1,0 +1,46 @@
+{
+  "name": "kuratorkas",
+  "version": "0.1.0",
+  "description": "KuratorKas × Curator.OS — AI Stylist + POS untuk UMKM Fashion Indonesia",
+  "type": "module",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "dev:sandbox": "wrangler pages dev dist --ip 0.0.0.0 --port 3000",
+    "dev:d1": "wrangler pages dev dist --d1=DB --local --ip 0.0.0.0 --port 3000",
+    "build": "vite build",
+    "preview": "wrangler pages dev dist",
+    "deploy": "npm run build && wrangler pages deploy dist",
+    "deploy:preview": "npm run build && wrangler pages deploy dist --branch=preview",
+    "deploy:staging": "npm run build && wrangler pages deploy dist --branch=staging",
+    "deploy:prod": "npm run build && wrangler pages deploy dist --branch=main --project-name kuratorkas",
+    "db:create:prod": "wrangler d1 create kuratorkas-production",
+    "db:create:staging": "wrangler d1 create kuratorkas-staging",
+    "db:migrate:local": "wrangler d1 migrations apply kuratorkas-production --local",
+    "db:migrate:staging": "wrangler d1 migrations apply kuratorkas-staging",
+    "db:migrate:prod": "wrangler d1 migrations apply kuratorkas-production",
+    "db:seed:local": "wrangler d1 execute kuratorkas-production --local --file=./seed-data/seed.sql",
+    "db:reset:local": "rm -rf .wrangler/state/v3/d1 && npm run db:migrate:local && npm run db:seed:local",
+    "db:console:local": "wrangler d1 execute kuratorkas-production --local --command",
+    "cf-typegen": "wrangler types --env-interface CloudflareBindings",
+    "clean-port": "fuser -k 3000/tcp 2>/dev/null || true",
+    "test": "curl http://localhost:3000/api/health",
+    "lint": "echo 'lint: TODO'",
+    "typecheck": "echo 'typecheck: TODO'"
+  },
+  "dependencies": {
+    "hono": "^4.12.12"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20250705.0",
+    "@hono/vite-build": "^1.2.0",
+    "@hono/vite-dev-server": "^0.18.2",
+    "vite": "^6.3.5",
+    "wrangler": "^4.4.0",
+    "typescript": "^5.5.0"
+  }
+}

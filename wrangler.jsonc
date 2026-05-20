@@ -1,0 +1,30 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  // ============================================================
+  // KURATORKAS × CURATOR.OS — Cloudflare Pages Configuration
+  // Owner: Reza Estes / Haidar — Sovereign AI Dev
+  // Doctrine: Master-Architect v5.0 CANONICAL
+  // ============================================================
+  "name": "kuratorkas",
+  "compatibility_date": "2026-04-17",
+  "compatibility_flags": ["nodejs_compat"],
+  "pages_build_output_dir": "./dist",
+
+  "vars": {
+    "ENVIRONMENT": "production",
+    "APP_NAME": "KuratorKas",
+    "APP_VERSION": "0.1.0"
+  }
+
+  // ----------------------------------------
+  // Bindings to be configured after Cloudflare project creation:
+  //   d1_databases  : run `npx wrangler d1 create kuratorkas-production`
+  //   kv_namespaces : run `npx wrangler kv namespace create kuratorkas-kv`
+  //   r2_buckets    : run `npx wrangler r2 bucket create kuratorkas-assets`
+  //   ai            : { "binding": "AI" }
+  //
+  // SECRETS (set via `wrangler pages secret put ... --project-name kuratorkas`)
+  //   JWT_SECRET, OPENAI_API_KEY, ANTHROPIC_API_KEY,
+  //   SHOPEE_*, TOKOPEDIA_*, TIKTOK_SHOP_*, DUITKU_*
+  // ----------------------------------------
+}
