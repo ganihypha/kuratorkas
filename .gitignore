@@ -11,3 +11,8 @@ dist/
 .vscode/
 .idea/
 *.swp
+.env.local
+.env.*.local
+*.zip
+*.tar.gz
+pids/

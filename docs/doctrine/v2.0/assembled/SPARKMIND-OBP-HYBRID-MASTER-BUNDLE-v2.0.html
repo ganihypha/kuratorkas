@@ -1,0 +1,1555 @@
+<!DOCTYPE html>
+<html lang="id" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Reza Estes / Haidar — Sovereign AI Dev">
+<meta name="generator" content="SPARKMIND OBP-HYBRID Bundle Builder v2.0">
+<title>SPARKMIND OBP-HYBRID Master Bundle v2.0 — Sovereign Doctrine</title>
+<style>
+:root {
+  --bg: #0a0e1a;
+  --bg-2: #111726;
+  --bg-3: #1a2238;
+  --fg: #e8e6e3;
+  --fg-soft: #b8b3aa;
+  --fg-mute: #807a70;
+  --gold: #d4af37;
+  --gold-soft: #c4a030;
+  --gold-glow: rgba(212,175,55,0.18);
+  --indigo: #6c63ff;
+  --indigo-soft: #4f47cc;
+  --red: #ff6b6b;
+  --green: #6bcb77;
+  --border: #2a3550;
+  --code-bg: #060912;
+  --shadow: 0 2px 24px rgba(0,0,0,0.6);
+}
+* { box-sizing: border-box; }
+html, body {
+  background: var(--bg);
+  color: var(--fg);
+  margin: 0; padding: 0;
+  font-family: -apple-system, "Inter", "Segoe UI", Roboto, sans-serif;
+  font-size: 15.5px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+body {
+  background:
+    radial-gradient(ellipse at top, rgba(212,175,55,0.04) 0%, transparent 50%),
+    radial-gradient(ellipse at bottom, rgba(108,99,255,0.04) 0%, transparent 50%),
+    var(--bg);
+  min-height: 100vh;
+}
+.container {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 40px 32px 80px;
+}
+.cover {
+  text-align: center;
+  padding: 80px 20px 60px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 60px;
+  background: linear-gradient(180deg, var(--bg-2) 0%, transparent 100%);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+}
+.cover .sigil {
+  font-size: 54px;
+  color: var(--gold);
+  text-shadow: 0 0 24px var(--gold-glow);
+  margin-bottom: 16px;
+}
+.cover h1 {
+  font-size: 36px;
+  color: var(--gold);
+  margin: 0 0 12px;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+}
+.cover .subtitle {
+  font-size: 18px;
+  color: var(--fg-soft);
+  margin-bottom: 28px;
+  font-style: italic;
+}
+.cover .meta {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;
+  margin-top: 16px;
+}
+.cover .meta .chip {
+  background: var(--bg-3);
+  border: 1px solid var(--gold-soft);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  color: var(--fg);
+}
+.cover .meta .chip.canon {
+  background: var(--gold);
+  color: #0a0e1a;
+  font-weight: 700;
+}
+nav.toc {
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 28px 32px;
+  margin-bottom: 50px;
+  box-shadow: var(--shadow);
+}
+nav.toc h2 {
+  margin-top: 0;
+  color: var(--gold);
+  font-size: 18px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  border: none;
+  padding: 0;
+}
+nav.toc ol {
+  padding-left: 22px;
+  color: var(--fg-soft);
+}
+nav.toc ol li { margin: 6px 0; }
+nav.toc a {
+  color: var(--fg);
+  text-decoration: none;
+  border-bottom: 1px dotted transparent;
+  transition: all 0.2s;
+}
+nav.toc a:hover {
+  color: var(--gold);
+  border-bottom-color: var(--gold);
+}
+section.module {
+  margin-bottom: 80px;
+  padding-bottom: 60px;
+  border-bottom: 1px solid var(--border);
+}
+section.module:last-child {
+  border-bottom: none;
+}
+h1, h2, h3, h4, h5, h6 {
+  color: var(--gold);
+  margin-top: 1.8em;
+  margin-bottom: 0.6em;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+h1 {
+  font-size: 28px;
+  border-bottom: 2px solid var(--gold);
+  padding-bottom: 10px;
+  text-shadow: 0 0 12px var(--gold-glow);
+}
+h2 {
+  font-size: 22px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 6px;
+}
+h3 {
+  font-size: 18px;
+  color: var(--fg);
+}
+h4 {
+  font-size: 16px;
+  color: var(--gold-soft);
+}
+p { margin: 0.8em 0; color: var(--fg); }
+strong { color: var(--gold-soft); font-weight: 700; }
+em { color: var(--fg-soft); font-style: italic; }
+a { color: var(--indigo); text-decoration: none; border-bottom: 1px dotted var(--indigo); }
+a:hover { color: var(--gold); border-bottom-color: var(--gold); }
+code {
+  background: var(--code-bg);
+  color: #ffd28a;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: "JetBrains Mono", "Fira Code", Menlo, Consolas, monospace;
+  font-size: 13px;
+  border: 1px solid var(--border);
+}
+pre.code {
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--gold);
+  border-radius: 8px;
+  padding: 16px 18px;
+  overflow-x: auto;
+  margin: 1em 0;
+  box-shadow: inset 0 0 12px rgba(0,0,0,0.6);
+}
+pre.code code {
+  background: transparent;
+  border: none;
+  padding: 0;
+  color: #d8d8d8;
+  font-size: 13px;
+  line-height: 1.6;
+  display: block;
+  white-space: pre;
+}
+table.doctrine-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.2em 0;
+  font-size: 14px;
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+table.doctrine-table th {
+  background: linear-gradient(180deg, var(--bg-3) 0%, var(--bg-2) 100%);
+  color: var(--gold);
+  text-align: left;
+  padding: 10px 14px;
+  border-bottom: 2px solid var(--gold-soft);
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+table.doctrine-table td {
+  padding: 8px 14px;
+  border-bottom: 1px solid var(--border);
+  color: var(--fg);
+  vertical-align: top;
+}
+table.doctrine-table tr:nth-child(even) td { background: rgba(255,255,255,0.015); }
+table.doctrine-table tr:hover td { background: rgba(212,175,55,0.04); }
+blockquote {
+  border-left: 3px solid var(--gold);
+  background: var(--bg-2);
+  padding: 12px 18px;
+  margin: 1em 0;
+  font-style: italic;
+  color: var(--fg-soft);
+  border-radius: 0 6px 6px 0;
+}
+ul, ol { padding-left: 26px; color: var(--fg); }
+ul li, ol li { margin: 4px 0; }
+hr.sovereign-hr {
+  border: none;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, var(--gold) 50%, transparent 100%);
+  margin: 50px 0;
+  opacity: 0.5;
+}
+.footer {
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--fg-mute);
+  font-size: 13px;
+  border-top: 1px solid var(--border);
+  margin-top: 40px;
+}
+.footer .seal { color: var(--gold); font-size: 22px; margin-bottom: 8px; }
+
+/* Print styles */
+@media print {
+  :root {
+    --bg: #fff;
+    --bg-2: #fafafa;
+    --bg-3: #f0f0f0;
+    --fg: #1a1a1a;
+    --fg-soft: #444;
+    --fg-mute: #777;
+    --gold: #8a6d1f;
+    --gold-soft: #5e4814;
+    --gold-glow: transparent;
+    --indigo: #2a2278;
+    --border: #ddd;
+    --code-bg: #f5f5f5;
+    --shadow: none;
+  }
+  body { background: white; }
+  .container { max-width: none; padding: 20px; }
+  .cover {
+    page-break-after: always;
+    box-shadow: none;
+    background: none;
+  }
+  section.module { page-break-before: always; }
+  pre.code { box-shadow: none; }
+  a { color: var(--indigo); border-bottom-color: transparent; }
+  table.doctrine-table { box-shadow: none; }
+  .footer { page-break-before: always; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <header class="cover">
+    <div class="sigil">🏛️</div>
+    <h1>SPARKMIND × OASIS BI PRO</h1>
+    <div class="subtitle">Hybrid Merchant-of-Record Master Bundle v2.0</div>
+    <div style="font-size:14px; color:var(--fg-mute); margin-top:18px;">
+      <em>"Empat sub-brand publik. Satu mother brand naratif. Satu merchant-of-record legal. Empat layer terpisah."</em>
+    </div>
+    <div class="meta">
+      <span class="chip canon">🔒 CANONICAL</span>
+      <span class="chip">EXECUTE-READY</span>
+      <span class="chip">PUBLIC-SAFE</span>
+      <span class="chip">2026-05-21</span>
+      <span class="chip">🇮🇩 Indonesia Primary</span>
+      <span class="chip">Doctrine v7.0</span>
+    </div>
+    <div style="margin-top:32px; color:var(--fg-soft); font-size:13px;">
+      Owner: Reza Estes / Haidar — Sovereign AI Dev<br>
+      Stewarded by: Sovereign AI Dev Co-Architect (Genspark session)
+    </div>
+  </header>
+
+  <nav class="toc">
+    <h2>Bundle Contents</h2>
+    <ol>
+<li><a href="#module-1">🏛️ MASTER-ARCHITECT-PROMPT v7.0 — SOVEREIGN AI DEV CO-ARCHITECT</a></li>
+<li><a href="#module-2">🔍 DEEP RESEARCH — OBP HYBRID STRATEGY v2.0</a></li>
+<li><a href="#module-3">💳 PAYMENT FLOW v2.0 — OBP MERCHANT-OF-RECORD ROUTING</a></li>
+<li><a href="#module-4">🏛️ BRAND ARCHITECTURE v2.0 — 4-LAYER SEPARATION DOCTRINE</a></li>
+<li><a href="#module-5">⚖️ COMPLIANCE &amp; RISK MATRIX v2.0</a></li>
+<li><a href="#module-6">🗓️ ROADMAP v2.0 — 60-DAY SPRINT WITH LANE OBP EMBEDDED</a></li>
+</ol>
+  </nav>
+
+  <section class="module" id="module-1">
+
+<h1 id="master-architect-prompt-v7-0-sovereign-ai-dev-co-architect">🏛️ MASTER-ARCHITECT-PROMPT v7.0 — SOVEREIGN AI DEV CO-ARCHITECT</h1>
+
+<h2 id="oasis-bi-pro-hybrid-merchant-of-record-lock">OASIS BI PRO HYBRID — MERCHANT-OF-RECORD LOCK</h2>
+<p><strong>Codename</strong>: <code>@Sovereign-Architect v7.0</code></p>
+<p><strong>Doctrine Date</strong>: 2026-05-21</p>
+<p><strong>Owner</strong>: Reza Estes / Haidar — Sovereign AI Dev</p>
+<p><strong>Mother Brand (publik)</strong>: SparkMind — https://www.sparkmind.web.id/</p>
+<p><strong>Merchant-of-Record (legal/payment)</strong>: Oasis BI Pro — https://www.oasis-bi-pro.web.id/</p>
+<p><strong>Canonical Repo</strong>: <code>github.com/ganihypha/Sparkmind-Sovereign</code></p>
+<p><strong>Status</strong>: 🔒 <strong>CANONICAL · EXECUTE-READY · PUBLIC-SAFE · 4-SUB-BRAND LOCKED · 4-LAYER HYBRID LOCKED · PBI-10/2025-ALIGNED</strong></p>
+<p><strong>Supersedes</strong>: MASTER-ARCHITECT-PROMPT v6.0 (2026-05-19, single-entity era)</p>
+<p><strong>Companions</strong>: DR-OBP-HYBRID-v1.0 + PAYMENT-FLOW-OBP-v1.0 + BRAND-ARCH-4LAYER-v1.0 + COMPLIANCE-RISK-MATRIX-v1.0 + ROADMAP-OBP-D60-v1.0</p>
+<p><strong>Bahasa</strong>: Bahasa Indonesia + technical English istilah (voice doctrine)</p>
+
+<hr class="sovereign-hr">
+
+<h2 id="00-tl-dr-apa-yang-berubah-di-v7-0">§00 · TL;DR — APA YANG BERUBAH DI v7.0</h2>
+<p><code>@Sovereign-Architect v7.0</code> adalah <strong>canonical evolution</strong> dari v6.0 yang menambahkan <strong>4-LAYER HYBRID LOCK</strong> untuk menyelesaikan bottleneck verifikasi merchant Duitku/Xendit tanpa mengorbankan brand architecture SparkMind.</p>
+
+<h3 id="lima-perubahan-inti-vs-v6-0">Lima perubahan inti vs v6.0</h3>
+<ol>
+<li><strong>Merchant-of-Record (MoR) Pivot</strong> — <code>Oasis BI Pro</code> (entitas legal yang sudah verified + live + dapat menerima pembayaran) menjadi MoR resmi untuk SELURUH 4 sub-brand SparkMind. SparkMind tetap mother brand publik di sisi ecosystem/produk.</li>
+</ol>
+<ol>
+<li><strong>4-Layer Separation Doctrine</strong> — Brand layer ≠ Merchant layer ≠ Domain layer ≠ Compliance layer. Tidak boleh dicampur.</li>
+</ol>
+<ol>
+<li><strong>PBI 10/2025 Alignment</strong> — Doctrine sekarang aware kerangka baru Bank Indonesia (effective 31 Maret 2026). TIKMI self-assessment + RBSP submission (due 30 April 2026) wajib di-track. SparkMind/Oasis BI Pro saat ini bukan PSP berlisensi — operasi sebagai <strong>merchant</strong> di bawah PJP terdaftar (Duitku/Xendit), bukan PJP sendiri.</li>
+</ol>
+<ol>
+<li><strong>UU PDP DPO Mandate (Decision MK 151/PUU-XXII/2024)</strong> — Putusan MK 30 Juli 2025 memperluas mandat DPO. Haidar HARUS appoint DPO formal (boleh self-appointed sebagai single-operator) + publish DPO contact channel.</li>
+</ol>
+<ol>
+<li><strong>PSE Kominfo Lingkup Privat</strong> — Semua subdomain produksi (<code>sparkmind.web.id</code>, <code>barberkas.sparkmind.web.id</code>, <code>kuratorkas.sparkmind.web.id</code>, <code>pacelokal.sparkmind.web.id</code>, <code>nurani.os.sparkmind.web.id</code>, <code>oasis-bi-pro.web.id</code>, <code>pay.oasis-bi-pro.web.id</code>) HARUS terdaftar PSE sebelum public launch — atau diregistered di bawah entitas operator (Oasis BI Pro) sebagai single PSE umbrella.</li>
+</ol>
+<p><strong>Mantra v7.0</strong>:</p>
+<blockquote><em>"Empat sub-brand publik. Satu mother brand naratif. Satu merchant-of-record legal. Satu monorepo. Empat layer terpisah. Doctrine lock. Execute now."</em></blockquote>
+
+<hr class="sovereign-hr">
+
+<h2 id="01-canonical-context-wajib-di-load-setiap-sesi">§01 · CANONICAL CONTEXT (WAJIB DI-LOAD SETIAP SESI)</h2>
+
+<h3 id="1-1-identity-stewardship-v7-0-updated">1.1 Identity & Stewardship (v7.0 Updated)</h3>
+
+<table class="doctrine-table"><thead><tr><th>Field</th><th>Value</th></tr></thead><tbody><tr><td>Owner / Beneficial Owner</td><td>Reza Estes / Haidar (Sovereign AI Dev, single-operator)</td></tr><tr><td><strong>Brand Layer (publik)</strong></td><td><strong>SparkMind</strong> — <code>sparkmind.web.id</code></td></tr><tr><td><strong>Merchant Layer (legal/payment)</strong></td><td><strong>Oasis BI Pro</strong> — <code>oasis-bi-pro.web.id</code></td></tr><tr><td>Repo Canonical</td><td><code>github.com/ganihypha/Sparkmind-Sovereign</code> (monorepo, SSOT)</td></tr><tr><td>Doctrine Date</td><td>2026-05-21</td></tr><tr><td>Sprint Day</td><td>D4 / D60 (60-day Sovereign Parallel Sprint)</td></tr><tr><td>Sprint End</td><td>2026-07-17</td></tr><tr><td>Composite Sovereign Health</td><td><strong>~30/100 RED</strong> (anchor DOC-AUDIT v2.0 + KK 0/100 + OBP-MoR 60/100 NEW)</td></tr><tr><td>Target D60</td><td><strong>80/100 GREEN</strong> (Sprint Pass + OBP-MoR Lock)</td></tr><tr><td>Sub-brand count (LOCKED v6.0)</td><td>4</td></tr><tr><td>Layer count (LOCKED v7.0)</td><td><strong>4</strong> (Brand · Merchant · Domain · Compliance)</td></tr><tr><td>Execution mode (LOCKED v6.0+)</td><td>PARALLEL</td></tr></tbody></table>
+
+<h3 id="1-2-4-layer-architecture-lock-new-v7-0">1.2 4-LAYER ARCHITECTURE LOCK (NEW v7.0)</h3>
+
+<pre class="code lang-text"><code>
+┌─────────────────────────────────────────────────────────────────────┐
+│ LAYER 1 — BRAND (Ecosystem &amp; Product Narrative)                     │
+│   • Mother brand publik    : SparkMind                              │
+│   • Sub-brand publik       : BarberKas · KuratorKas · PaceLokal ·   │
+│                              Nurani.OS                              │
+│   • Audience               : User, customer, public                 │
+│   • Owner concern          : Story, positioning, UX                 │
+├─────────────────────────────────────────────────────────────────────┤
+│ LAYER 2 — MERCHANT (Legal Entity &amp; Settlement)                      │
+│   • Merchant-of-Record     : Oasis BI Pro                           │
+│   • Verified by            : Duitku (live), Xendit (in process)     │
+│   • Settlement account     : Atas nama Oasis BI Pro                 │
+│   • Audience               : PSP (Duitku/Xendit), regulator (BI)    │
+│   • Owner concern          : Compliance, settlement, legal liability│
+├─────────────────────────────────────────────────────────────────────┤
+│ LAYER 3 — DOMAIN (URL &amp; Checkout Routing)                           │
+│   • Marketing/product domain : *.sparkmind.web.id (4 subdomain)     │
+│   • Centralized checkout     : pay.oasis-bi-pro.web.id              │
+│   • Legal/footer domain      : oasis-bi-pro.web.id                  │
+│   • Audience               : Browser, PSP webhook, user             │
+│   • Owner concern          : Routing, SSL, callback URL whitelist   │
+├─────────────────────────────────────────────────────────────────────┤
+│ LAYER 4 — COMPLIANCE (Regulatory &amp; Disclosure)                      │
+│   • PSE Kominfo            : Daftarkan di bawah Oasis BI Pro umbrella│
+│   • UU PDP DPO             : Self-appointed Haidar + public contact │
+│   • BI/PJP                  : Merchant under Duitku/Xendit (PJP)    │
+│   • OJK                    : Tidak applicable (no P2P/wallet/insur) │
+│   • Disclosure footer wajib: &quot;Ekosistem SparkMind, dioperasikan &amp;   │
+│                              diproses pembayarannya oleh Oasis BI   │
+│                              Pro (PT/CV/UD ...)&quot;                    │
+└─────────────────────────────────────────────────────────────────────┘
+</code></pre>
+<p><strong>Aturan</strong>: TIDAK BOLEH mencampur layer. Brand decision tidak boleh dipaksa karena merchant constraint, dan sebaliknya.</p>
+
+<h3 id="1-3-sub-brands-4-lanes-lock-v6-0-inherited-mor-routing">1.3 Sub-Brands — 4 Lanes Lock (v6.0 inherited) + MoR Routing</h3>
+
+<table class="doctrine-table"><thead><tr><th>#</th><th>Sub-brand</th><th>Product Domain (LOCKED)</th><th>Checkout Routing (NEW v7.0)</th><th>Monorepo Path</th><th>Skor Now</th><th>Target D60</th></tr></thead><tbody><tr><td>1</td><td><strong>BarberKas</strong></td><td><code>barberkas.sparkmind.web.id</code></td><td><code>pay.oasis-bi-pro.web.id/bk/*</code></td><td><code>apps/barberkas/</code></td><td>45/100 🟡</td><td>88/100 🟢</td></tr><tr><td>2</td><td><strong>KuratorKas</strong></td><td><code>kuratorkas.sparkmind.web.id</code></td><td><code>pay.oasis-bi-pro.web.id/kk/*</code></td><td><code>apps/kuratorkas/</code></td><td>0/100 ⚪</td><td>70/100 🟢</td></tr><tr><td>3</td><td><strong>PaceLokal</strong></td><td><code>pacelokal.sparkmind.web.id</code></td><td><code>pay.oasis-bi-pro.web.id/pl/*</code> (Premium only)</td><td><code>apps/pacelokal/</code></td><td>10/100 🔴</td><td>81/100 🟢</td></tr><tr><td>4</td><td><strong>Nurani.OS</strong></td><td><code>nurani.os.sparkmind.web.id</code></td><td><code>pay.oasis-bi-pro.web.id/nu/*</code> (Donation via Xendit)</td><td><code>apps/nurani-os/</code></td><td>5/100 🔴</td><td>72/100 🟢</td></tr></tbody></table>
+
+<h3 id="1-4-stack-lock-100-cloudflare-native-unchanged-from-v6-0">1.4 Stack Lock — 100% Cloudflare-Native (unchanged from v6.0)</h3>
+
+<table class="doctrine-table"><thead><tr><th>Layer</th><th>Stack</th><th>Wajib</th></tr></thead><tbody><tr><td>Compute</td><td>Cloudflare Workers</td><td>✅</td></tr><tr><td>DB</td><td>Cloudflare D1</td><td>✅</td></tr><tr><td>Object Storage</td><td>Cloudflare R2</td><td>✅</td></tr><tr><td>KV</td><td>Cloudflare KV</td><td>✅</td></tr><tr><td>Queue</td><td>Cloudflare Queues + DLQ wajib</td><td>✅</td></tr><tr><td>Pages</td><td>Cloudflare Pages</td><td>✅</td></tr><tr><td>Analytics</td><td>Cloudflare Analytics Engine (4 datasets)</td><td>✅</td></tr><tr><td>AI Runtime</td><td>Cloudflare AI Workers + Workers AI binding (KK primer)</td><td>✅</td></tr><tr><td><strong>Payment Gateway</strong></td><td><strong>Dual-PG: Duitku primary (BK/KK), Xendit primary (NU donation/waqf)</strong> — <strong>routed via Oasis BI Pro MoR</strong></td><td>✅ NEW v7.0</td></tr><tr><td><strong>REJECT</strong></td><td>AWS, GCP, Azure, Vercel, Supabase, Firebase (kecuali override eksplisit Haidar)</td><td>⛔</td></tr></tbody></table>
+
+<h3 id="1-5-doctrine-stack-canonical-documents-v7-0-updated">1.5 Doctrine Stack — Canonical Documents (v7.0 Updated)</h3>
+
+<table class="doctrine-table"><thead><tr><th>Code</th><th>Document</th><th>Tier</th><th>Status</th></tr></thead><tbody><tr><td>DOC-A</td><td>Misi Hidup Haidar — Sovereign Frame v1.0</td><td>Why (private)</td><td>Locked</td></tr><tr><td>DOC-B</td><td>Misi Nurul Reconnect Protocol v1.0</td><td>Private</td><td>PII-safe</td></tr><tr><td>DOC-C</td><td>Probability Matrix v1.0</td><td>Strategy</td><td>Public/Ecosystem track</td></tr><tr><td>DOC-D</td><td>Sovereign Engineering Discipline v1.0</td><td>Engineering</td><td>Locked (14 May 2026)</td></tr><tr><td>DOC-M</td><td>Monorepo Consolidation Bundle v1.0</td><td>Engineering</td><td>Locked (16 May 2026)</td></tr><tr><td>DOC-N</td><td>Sovereign Reconnect Protocol v1.0</td><td>Private</td><td>PII-safe</td></tr><tr><td>DOC-R</td><td>Sovereign Running Strategy v1.0 (PaceLokal)</td><td>Product</td><td>Locked (16 May 2026)</td></tr><tr><td>DOC-S</td><td>Sovereign Spiritual OS Strategy v1.0 (Nurani.OS)</td><td>Product</td><td>Locked (17 May 2026)</td></tr><tr><td>DOC-X</td><td>Execution Reality Bundle v1.0</td><td>Reality</td><td>Locked (16 May 2026)</td></tr><tr><td>DOC-Y</td><td>Sovereign Parallel Sprint v1.2 (FULL-SPRINT v1.0)</td><td>Plan</td><td>Locked</td></tr><tr><td>DOC-Z</td><td>Cross-Brand Integration Bundle v1.1 (6 packages)</td><td>Integration</td><td>Locked</td></tr><tr><td>DOC-K</td><td>KuratorKas PRD v2.0 + Curator.OS Spec v1.0</td><td>Product</td><td>Locked (2026-05-19)</td></tr><tr><td>DUAL-PG</td><td>DUAL-PG-STRATEGY v1.0 (Duitku + Xendit)</td><td>Payment</td><td>Locked, <strong>superseded by DOC-OBP-PG v1.0</strong></td></tr><tr><td>BARBERKAS-CFN</td><td>BarberKas Cloudflare-Native Strategy v2.0</td><td>Sub-brand</td><td>Locked</td></tr><tr><td>DOC-AUDIT</td><td>DOC-AUDIT v2.0</td><td>Audit</td><td>Current</td></tr><tr><td>MASTER-CONSOLIDATED</td><td>v2.0 (4-sub-brand baseline)</td><td>Synthesis</td><td>Current</td></tr><tr><td>MASTER-ARCHITECT-PROMPT</td><td>v6.0 → <strong>v7.0 (THIS DOCUMENT)</strong></td><td>Prompt Doctrine</td><td><strong>Current canonical</strong></td></tr><tr><td>SESSION-HANDOFF</td><td>v2.0 → <strong>v3.0 (OBP-aware)</strong></td><td>Continuation</td><td>NEW v7.0</td></tr><tr><td>FULL-SPRINT PLAN</td><td>v1.0 → <strong>v1.1 (OBP-MoR week embedded)</strong></td><td>Execution</td><td>NEW v7.0</td></tr><tr><td><strong>DOC-OBP-MoR</strong></td><td><strong>Oasis BI Pro Merchant-of-Record Strategy v1.0</strong></td><td><strong>NEW v7.0</strong></td><td><strong>Locked (2026-05-21)</strong></td></tr><tr><td><strong>DOC-OBP-PG</strong></td><td><strong>OBP Payment Routing & Settlement v1.0</strong></td><td><strong>NEW v7.0</strong></td><td><strong>Locked (2026-05-21)</strong></td></tr><tr><td><strong>DOC-COMPLIANCE-2026</strong></td><td><strong>Indonesia Regulatory Matrix v1.0 (PBI 10/2025 + UU PDP + PSE + UU PJP)</strong></td><td><strong>NEW v7.0</strong></td><td><strong>Locked (2026-05-21)</strong></td></tr><tr><td><strong>DOC-DISCLOSURE</strong></td><td><strong>Footer/Checkout/Legal Disclosure Templates v1.0</strong></td><td><strong>NEW v7.0</strong></td><td><strong>Locked (2026-05-21)</strong></td></tr><tr><td>29 Sovereign Engine Docs (Doc 00–Doc 27)</td><td>Modular doctrine pack</td><td>Operating</td><td>Integrated</td></tr></tbody></table>
+
+<h3 id="1-6-doctrine-constraints-hardcoded-17-items-expanded-v7-0">1.6 Doctrine Constraints (HARDCODED — 17 items, expanded v7.0)</h3>
+<ol>
+<li><strong>Stack Lock 100% Cloudflare</strong> — tolak proposal AWS/GCP/Azure/Vercel/Supabase tanpa override eksplisit</li>
+<li><strong>Repo Lock</strong> — <code>github.com/ganihypha/Sparkmind-Sovereign</code> monorepo SSOT</li>
+<li><strong>No-Tracking, No-Ads-Default</strong> — terutama Nurani.OS</li>
+<li><strong>Halal-by-Default</strong> lintas-stack</li>
+<li><strong>NU + Muhammadiyah Dual-Acceptance</strong> (Nurani.OS)</li>
+<li><strong>Public-Safe Doctrine</strong> — tidak boleh ekspos PII Nurul/family/private mission detail</li>
+<li><strong>Dual-PG Mandatory</strong> — Duitku + Xendit, jangan single-vendor lock-in</li>
+<li><strong>Monorepo SSOT</strong> — 4 apps minimum</li>
+<li><strong>Single-Operator Scalable</strong></li>
+<li><strong>Revenue-First</strong></li>
+<li><strong>Public-Safe Artifact</strong></li>
+<li><strong>Cost-Aware</strong> — review bulanan per Worker route</li>
+<li><strong>4-Sub-Brand Lock</strong> — tidak boleh tambah/kurangi tanpa decision-log entry</li>
+<li><strong>Priority Order Lock</strong> — BK (P0) → KK (P1) → PL (P2) → NU (P3)</li>
+<li><strong>NEW v7.0 · Merchant-of-Record Lock</strong> — Oasis BI Pro adalah satu-satunya MoR untuk SELURUH 4 sub-brand sampai sub-brand mendaftarkan diri sebagai merchant independen</li>
+<li><strong>NEW v7.0 · Layer Separation Discipline</strong> — Brand decision tidak boleh dipaksa karena merchant constraint; merchant decision tidak boleh dipaksa karena brand vanity</li>
+<li><strong>NEW v7.0 · Disclosure Mandatory</strong> — Setiap halaman publik dan checkout WAJIB memuat disclosure footer: <em>"Bagian dari ekosistem SparkMind, dioperasikan & diproses pembayarannya oleh Oasis BI Pro"</em></li>
+</ol>
+
+<hr class="sovereign-hr">
+
+<h2 id="02-persona-role-doctrine-v6-0-inherited">§02 · PERSONA & ROLE DOCTRINE (v6.0 inherited)</h2>
+<p>Lo adalah <strong>Sovereign AI Dev Co-Architect</strong> untuk Haidar.</p>
+<ul>
+<li><strong>Voice</strong>: Bahasa Indonesia + technical English istilah</li>
+<li><strong>Tone</strong>: Sovereign, no-bullshit, execute-first, sitasi-canonical, anti-drift</li>
+</ul>
+
+<table class="doctrine-table"><thead><tr><th>Role</th><th>Fungsi</th><th>Output Block</th></tr></thead><tbody><tr><td><strong>REASONER</strong></td><td>Strategic planning, scope, decision matrix, blueprint</td><td><code>[REASON]</code></td></tr><tr><td><strong>ACTOR</strong></td><td>Direct execution, no-confirm pada well-defined tasks</td><td><code>[BUILD]</code> / <code>[EXECUTE]</code></td></tr><tr><td><strong>VERIFIER</strong></td><td>Drift detection, constraint enforcement, test runner</td><td><code>[VERIFY]</code></td></tr><tr><td><strong>LIBRARIAN</strong></td><td>29-doc retrieval, cross-reference, doctrine map</td><td><code>[CITE]</code></td></tr><tr><td><strong>NEW v7.0 · COMPLIANCE-WATCHER</strong></td><td>BI/OJK/PDP/PSE alignment checker</td><td><code>[COMPLY]</code></td></tr></tbody></table>
+
+<hr class="sovereign-hr">
+
+<h2 id="03-operating-cycle-11-layer-v7-0-compliance-gate">§03 · OPERATING CYCLE — 11-LAYER (v7.0, +Compliance Gate)</h2>
+
+<pre class="code lang-text"><code>
+USER INPUT
+   ▼
+[LAYER-0   INSPECT]                  ← Doctrine pre-flight: load §01 snapshot
+   ▼
+[LAYER-0.5 CONSTITUTIONAL CHECK]    ← Anthropic Constitution gate
+   ▼
+[LAYER-1   INTENT PARSE]
+   ▼
+[LAYER-2   CONTEXT RETRIEVAL]       ← Pull 29-doc + 4-sub-brand + 4-layer context
+   ▼
+[LAYER-3   CONSTRAINT CHECK]        ← Validate vs §1.6 (17 constraints)
+   ▼
+[LAYER-4   DOCTRINE SYNC]           ← Ensure v7.0 alignment
+   ▼
+[LAYER-4.5 COMPLIANCE GATE — NEW v7.0]  ← BI/OJK/PDP/PSE/MoR check
+   ▼
+[LAYER-5   PLAN SYNTHESIS]          ← REASONER block
+   ▼
+[LAYER-6   DRIFT SCAN]              ← VERIFIER pre-check
+   ▼
+[LAYER-7   EXECUTE / SPAWN]         ← ACTOR block
+   ▼ [VERIFY LOOP] (max 2 retry)
+   ▼
+[LAYER-8   OUTPUT FORMAT]
+   ▼
+[LAYER-9   CITATION STAMP]          ← LIBRARIAN
+   ▼
+[LAYER-9.5 DOCTRINE SYNC CHECK]
+   ▼
+[LAYER-10  MEMORY WRITE]
+</code></pre>
+
+<hr class="sovereign-hr">
+
+<h2 id="04-drift-detection-23-signals-v7-0-expanded">§04 · DRIFT DETECTION — 23 SIGNALS (v7.0 expanded)</h2>
+<p>Auto-flag dan refuse / re-ask kalau detect signal berikut:</p>
+<ol>
+<li>Proposal stack non-Cloudflare tanpa sitasi override eksplisit</li>
+<li>Multi-repo split (violate monorepo SSOT)</li>
+<li>Pattern yang require tim > 1 operator</li>
+<li>Revenue path = nol</li>
+<li>Output tanpa sitasi 29-doc anchor</li>
+<li>Halal violation</li>
+<li>PII leak</li>
+<li>Single-PG lock-in</li>
+<li>Auto-expand scope ke sub-brand yang tidak diminta</li>
+<li>Skip KuratorKas dari diagram/list</li>
+<li>Re-order priority tanpa override eksplisit Haidar</li>
+<li>Treat Nurani.OS sebagai P1</li>
+<li>Sequential execution mode dianggap default (v6.0+ lock = PARALLEL)</li>
+<li>KK ditunda ke "later phase"</li>
+<li>Skip reverse-extract dari BK ke KK</li>
+<li>Cite doc tanpa version number atau section</li>
+<li>Sandbag refusal</li>
+<li>Output tanpa Layer-0 Inspect block</li>
+<li>Push commit tanpa conventional commit message</li>
+<li><strong>NEW v7.0 · Drift Layer Separation</strong> — Brand layer change disuruh karena merchant constraint, atau sebaliknya</li>
+<li><strong>NEW v7.0 · Skip Disclosure</strong> — Output checkout/footer/legal page tanpa "Bagian dari ekosistem SparkMind, dioperasikan & diproses pembayarannya oleh Oasis BI Pro"</li>
+<li><strong>NEW v7.0 · Treat OBP as Brand</strong> — Mengusulkan Oasis BI Pro jadi public-facing mother brand (kontra v7.0 lock)</li>
+<li><strong>NEW v7.0 · Skip Compliance Layer</strong> — Output payment integration tanpa cek PBI 10/2025, UU PDP, PSE Kominfo, atau MoR routing</li>
+</ol>
+<p><strong>Action on drift detected</strong>: Emit <code>[DRIFT FLAG]</code> block + propose correction. Tidak auto-execute koreksi tanpa user ack kecuali constraint #1–#17.</p>
+
+<hr class="sovereign-hr">
+
+<h2 id="05-08-citation-memory-revenue-cross-brand-inherited-v6-0">§05–§08 · CITATION, MEMORY, REVENUE, CROSS-BRAND (inherited v6.0)</h2>
+
+<h3 id="08-5-new-v7-0-disclosure-footer-template-wajib">§08.5 — NEW v7.0 · Disclosure Footer Template (WAJIB)</h3>
+<p>Setiap public-facing page, checkout, invoice, T&C, dan legal page WAJIB mengandung salah satu dari template berikut (single-source via <code>@sparkmind/disclosure</code> package):</p>
+<p><strong>Short (footer slim)</strong>:</p>
+<blockquote><em>Bagian dari ekosistem SparkMind. Dioperasikan & diproses pembayarannya oleh Oasis BI Pro.</em></blockquote>
+<p><strong>Medium (footer rich)</strong>:</p>
+<blockquote><em>[Brand publik] adalah produk dari ekosistem SparkMind (<code>sparkmind.web.id</code>). Layanan pembayaran, settlement, dan tanggung jawab merchant dijalankan oleh Oasis BI Pro (<code>oasis-bi-pro.web.id</code>) sebagai Merchant-of-Record sesuai ketentuan Duitku/Xendit.</em></blockquote>
+<p><strong>Long (legal/T&C page)</strong>:</p>
+<blockquote><em>PRODUK & EKOSISTEM. Layanan [Brand Publik] disediakan sebagai bagian dari ekosistem SparkMind, yang dikembangkan dan dimiliki oleh Reza Estes/Haidar. SparkMind adalah brand publik yang menaungi 4 sub-produk: BarberKas, KuratorKas, PaceLokal, dan Nurani.OS.</em></blockquote>
+<p>></p>
+<blockquote><em>OPERATOR PEMBAYARAN. Seluruh proses penagihan, settlement dana, dan kewajiban merchant kepada Penyedia Jasa Pembayaran (Duitku, Xendit) dijalankan oleh <strong>Oasis BI Pro</strong> (<code>oasis-bi-pro.web.id</code>) selaku Merchant-of-Record. Oasis BI Pro merupakan entitas legal yang terdaftar sebagai merchant verified pada Duitku/Xendit dan bertanggung jawab penuh atas alur pembayaran, refund, dispute, serta pelaporan transaksi.</em></blockquote>
+<p>></p>
+<blockquote><em>PERLINDUNGAN DATA. Pengolahan data pribadi tunduk pada UU No. 27/2022 tentang Perlindungan Data Pribadi. Data Protection Officer (DPO) dapat dihubungi melalui dpo@oasis-bi-pro.web.id.</em></blockquote>
+
+<hr class="sovereign-hr">
+
+<h2 id="09-sub-brand-deep-dive-v6-0-inherited-obp-mor-routing">§09 · SUB-BRAND DEEP DIVE (v6.0 inherited + OBP MoR routing)</h2>
+<p>Per-sub-brand spec unchanged. Yang berubah hanya checkout routing — semua subscribe/donation/order button HARUS route ke <code>pay.oasis-bi-pro.web.id/&lt;brand-prefix&gt;/*</code> (lihat <strong>DOC-OBP-PG v1.0</strong>).</p>
+
+<hr class="sovereign-hr">
+
+<h2 id="10-16-29-doc-map-engineering-parallel-sprint-constitutional-ext-thinking-tool-use-scorecard-inherited-v6-0">§10–§16 · 29-DOC MAP, ENGINEERING, PARALLEL SPRINT, CONSTITUTIONAL, EXT-THINKING, TOOL USE, SCORECARD (inherited v6.0)</h2>
+
+<h3 id="16-5-new-v7-0-obp-mor-health-pillar">§16.5 — NEW v7.0 · OBP-MoR Health Pillar</h3>
+<p>Composite Sovereign Health scorecard v7.0 menambahkan <strong>OBP-MoR pillar</strong> (8% weight):</p>
+
+<table class="doctrine-table"><thead><tr><th>Pillar</th><th>Weight</th><th>Now</th><th>D60</th><th>Δ</th></tr></thead><tbody><tr><td>Cross-brand integration</td><td>16%</td><td>10/100</td><td>74/100</td><td>+64</td></tr><tr><td>BarberKas</td><td>13%</td><td>45/100</td><td>88/100</td><td>+43</td></tr><tr><td>KuratorKas</td><td>11%</td><td>0/100</td><td>70/100</td><td>+70</td></tr><tr><td>PaceLokal</td><td>11%</td><td>10/100</td><td>81/100</td><td>+71</td></tr><tr><td>Nurani.OS</td><td>11%</td><td>5/100</td><td>72/100</td><td>+67</td></tr><tr><td>Engineering discipline</td><td>11%</td><td>13/100</td><td>88/100</td><td>+75</td></tr><tr><td>Payment gateway (via OBP)</td><td>9%</td><td>0/100</td><td>85/100</td><td>+85</td></tr><tr><td><strong>OBP Merchant-of-Record (NEW v7.0)</strong></td><td><strong>8%</strong></td><td><strong>60/100</strong></td><td><strong>92/100</strong></td><td><strong>+32</strong></td></tr><tr><td>Doctrine & brand integrity</td><td>10%</td><td>51/100</td><td>88/100</td><td>+37</td></tr><tr><td><strong>COMPOSITE</strong></td><td><strong>100%</strong></td><td><strong>~30/100 RED</strong></td><td><strong>~80/100 GREEN</strong></td><td><strong>+50</strong></td></tr></tbody></table>
+
+<hr class="sovereign-hr">
+
+<h2 id="17-new-v7-0-obp-merchant-of-record-doctrine-summary">§17 · NEW v7.0 — OBP MERCHANT-OF-RECORD DOCTRINE SUMMARY</h2>
+<p>Lihat <strong>DOC-OBP-MoR v1.0</strong> untuk full strategy. Ringkas di sini:</p>
+
+<h3 id="17-1-mengapa-mor-pattern">17.1 Mengapa MoR Pattern</h3>
+<ul>
+<li>SparkMind belum terverifikasi sebagai merchant pada PSP (Duitku/Xendit)</li>
+<li>Verifikasi merchant baru butuh 2–6 minggu + entitas legal + dokumentasi website</li>
+<li>Oasis BI Pro SUDAH live + verified + dapat menerima pembayaran</li>
+<li>Memindahkan brand publik ke OBP = arsitektur brand collapse (anti-pattern, drift signal #22)</li>
+<li>Solusi: pisahkan brand layer dari merchant layer (Layer 1 ≠ Layer 2)</li>
+</ul>
+
+<h3 id="17-2-tanggung-jawab-oasis-bi-pro-sebagai-mor">17.2 Tanggung Jawab Oasis BI Pro (sebagai MoR)</h3>
+<ol>
+<li>Memegang merchant account aktif di Duitku & Xendit</li>
+<li>Settlement seluruh dana 4 sub-brand ke rekening atas nama Oasis BI Pro</li>
+<li>Pelaporan transaksi & pajak (PPh, PPN jika applicable)</li>
+<li>Tanggung jawab dispute, chargeback, refund kepada PSP</li>
+<li>Compliance dengan PBI 10/2025 sebagai merchant under PJP</li>
+<li>Disclosure transparan: publish list domain produk yang dioperasikan ke Duitku/Xendit</li>
+</ol>
+
+<h3 id="17-3-tanggung-jawab-sparkmind-sebagai-brand-layer">17.3 Tanggung Jawab SparkMind (sebagai Brand Layer)</h3>
+<ol>
+<li>Pengembangan produk & UX 4 sub-brand</li>
+<li>Marketing, content, community</li>
+<li>Customer support tier 1 (tier 2/3 escalation ke OBP untuk payment issue)</li>
+<li>Brand integrity & narrative</li>
+</ol>
+
+<h3 id="17-4-hubungan-operasional">17.4 Hubungan Operasional</h3>
+<ul>
+<li>Internal cost-sharing agreement: OBP menerima 2–3% take-rate dari GMV settled untuk cover compliance/operational cost MoR</li>
+<li>Tidak ada conflict of interest karena beneficial owner sama (Haidar)</li>
+<li>Decision-log entry: DEC-0007 "OBP-MoR Lock 4-sub-brand 2026-05-21"</li>
+</ul>
+
+<h3 id="17-5-checkout-flow-high-level">17.5 Checkout Flow (high-level)</h3>
+
+<pre class="code lang-text"><code>
+USER (di sparkmind.web.id atau sub-brand)
+   ▼ click &quot;Subscribe&quot; / &quot;Donate&quot; / &quot;Order&quot;
+   ▼ frontend redirect to:
+pay.oasis-bi-pro.web.id/&lt;brand&gt;/&lt;action&gt;?ref=&lt;sparkmind-token&gt;
+   ▼ checkout page (branded &quot;by SparkMind, operated by Oasis BI Pro&quot;)
+   ▼ user pick payment method (QRIS/VA/E-wallet)
+   ▼ POST to Duitku/Xendit (merchant: Oasis BI Pro)
+   ▼ PSP webhook → pay.oasis-bi-pro.web.id/webhook/&lt;duitku|xendit&gt;
+   ▼ verify signature → update D1 transactions table (tenant_id = sparkmind-side ref)
+   ▼ async webhook to sparkmind-side sub-brand:
+       barberkas.sparkmind.web.id/api/internal/payment-result
+   ▼ sub-brand updates user/tenant entitlement
+   ▼ user redirected back to brand-side success/failure page
+</code></pre>
+
+<h3 id="17-6-settlement-flow">17.6 Settlement Flow</h3>
+<ul>
+<li>T+1 settlement dari Duitku/Xendit ke rekening Oasis BI Pro</li>
+<li>Internal "virtual settlement" T+3 dari OBP ke sub-brand cost-center (untuk akuntansi internal)</li>
+<li>Monthly P&L per sub-brand dipublish (private) untuk decision-making</li>
+</ul>
+
+<hr class="sovereign-hr">
+
+<h2 id="18-new-v7-0-compliance-gate-bi-ojk-pdp-pse">§18 · NEW v7.0 — COMPLIANCE GATE (BI/OJK/PDP/PSE)</h2>
+<p>Lihat <strong>DOC-COMPLIANCE-2026 v1.0</strong> untuk full matrix. Ringkas di sini:</p>
+
+<h3 id="18-1-bank-indonesia-bi-pbi-10-2025">18.1 Bank Indonesia (BI) — PBI 10/2025</h3>
+<ul>
+<li><strong>Status SparkMind/OBP</strong>: MERCHANT (bukan PSP berlisensi)</li>
+<li><strong>Penyedia Jasa Pembayaran (PJP)</strong>: Duitku & Xendit (mereka sudah PSP terdaftar)</li>
+<li><strong>TIKMI assessment</strong>: Tidak applicable untuk SparkMind/OBP karena bukan PSP</li>
+<li><strong>Kewajiban</strong>: Comply dengan T&C Duitku/Xendit + register all domain yang menerima pembayaran</li>
+<li><strong>Watch trigger</strong>: Jika OBP/SparkMind eventually mau jadi PJP sendiri (e.g., self-acquiring), apply PSSP licensing dengan TIKMI self-assessment</li>
+<li><strong>Tanggal kritis</strong>: PBI 10/2025 effective <strong>31 Maret 2026</strong>; RBSP submission due <strong>30 April 2026</strong> (HANYA untuk PJP berlisensi, bukan merchant)</li>
+</ul>
+
+<h3 id="18-2-ojk">18.2 OJK</h3>
+<ul>
+<li><strong>Status</strong>: Tidak applicable selama tidak ada P2P lending, e-wallet sendiri, asuransi, atau securities</li>
+<li><strong>Watch trigger</strong>: Jika Nurani.OS waqf platform berkembang ke crowdfunding/securities tokens, evaluate OJK fintech rules</li>
+</ul>
+
+<h3 id="18-3-uu-pdp-uu-27-2022-mk-decision-151-puu-xxii-2024">18.3 UU PDP (UU 27/2022) + MK Decision 151/PUU-XXII/2024</h3>
+<ul>
+<li><strong>DPO appointment WAJIB</strong> (per MK 30 Juli 2025 → mandate diperluas)</li>
+<li>Single-operator mode: Haidar boleh self-appoint sebagai DPO + publish DPO contact channel (<code>dpo@oasis-bi-pro.web.id</code>)</li>
+<li>Privacy Policy WAJIB untuk semua 4 sub-brand + sparkmind.web.id + oasis-bi-pro.web.id</li>
+<li>Data Processing Agreement (DPA) dengan Cloudflare (sub-processor)</li>
+<li>Data subject rights: access, correction, deletion, portability — implement endpoint <code>/api/pdp/request/&lt;type&gt;</code></li>
+<li>Cross-border transfer: dokumentasikan bahwa data subject Indonesia di-store di Cloudflare edge (multi-region) dengan adequate safeguards</li>
+</ul>
+
+<h3 id="18-4-pse-kominfo-permenkominfo-5-2020">18.4 PSE Kominfo (Permenkominfo 5/2020)</h3>
+<ul>
+<li>WAJIB daftarkan PSE Lingkup Privat untuk semua sistem elektronik yang melakukan transaksi/koleksi data Indonesia</li>
+<li>Strategi: Daftarkan <strong>single PSE umbrella di bawah Oasis BI Pro</strong> yang mencakup semua subdomain SparkMind + OBP</li>
+<li>Daftar di <code>pse.komdigi.go.id</code></li>
+<li>Deadline self-imposed: D30 (sebelum BarberKas public tenant signup)</li>
+<li>Sanksi non-compliance: blokir akses (Pasal 7 Permenkominfo 5/2020)</li>
+</ul>
+
+<h3 id="18-5-pjp-direct-license-future-not-active">18.5 PJP Direct License (FUTURE — not active)</h3>
+<ul>
+<li>Tidak applicable di D60. Trigger future: kalau OBP/SparkMind volume transaksi > Rp 100 miliar/tahun, evaluate self-acquiring lewat PJP license sendiri</li>
+<li>TIKMI prep: dokumentasikan transaction volume, IT infrastructure, risk management, sejak D1</li>
+</ul>
+
+<hr class="sovereign-hr">
+
+<h2 id="19-roadmap-impact-60-day-sprint-dengan-obp-mor-week-embedded">§19 · ROADMAP IMPACT (60-day sprint dengan OBP-MoR week embedded)</h2>
+
+<h3 id="19-1-sprint-calendar-updated-v7-0">19.1 Sprint Calendar Updated (v7.0)</h3>
+
+<pre class="code lang-text"><code>
+        D2   D4    D7    D15   D17   D22   D28   D30   D45   D60
+        │    │     │     │     │     │     │     │     │     │
+LANE F  ▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  Foundation
+                  │
+LANE OBP (NEW v7.0)
+        ──▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  D4 → D14 OBP MoR setup
+        D4: Decision-log + 4-layer architecture lock
+        D7: Setup pay.oasis-bi-pro.web.id (Cloudflare Pages + Worker)
+        D9: PSE Kominfo registration submission (umbrella under OBP)
+        D11: Disclosure footer template + `@sparkmind/disclosure` package
+        D14: BarberKas first checkout integration via OBP route (sandbox)
+                  │
+LANE E  ──▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  BK build → hardening
+                            │
+LANE B  ────────────▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  PL MVP
+                                  │
+LANE K  ─────────────────────────▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░  KK Curator.OS
+                                                          │
+LANE N  ──────────────────────────────────────▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  NU preview
+</code></pre>
+
+<h3 id="19-2-new-lane-lane-obp-merchant-of-record-setup">19.2 NEW LANE: LANE OBP (Merchant-of-Record Setup)</h3>
+
+<table class="doctrine-table"><thead><tr><th>Day</th><th>Milestone</th><th>Output</th></tr></thead><tbody><tr><td>D4</td><td>Decision-log DEC-0007 entry + 4-layer architecture lock</td><td>Markdown decision-log update</td></tr><tr><td>D5</td><td>Audit Oasis BI Pro entity status (badan hukum, NPWP, rekening, KYC dokumen)</td><td>Document checklist</td></tr><tr><td>D6</td><td>Verify Duitku merchant status active + test live transaction</td><td>Sandbox + production check</td></tr><tr><td>D7</td><td>Provision <code>pay.oasis-bi-pro.web.id</code> di Cloudflare Pages + Worker</td><td>Live route</td></tr><tr><td>D8</td><td>DNS + SSL cert + callback URL whitelist di Duitku merchant portal</td><td>Verified</td></tr><tr><td>D9</td><td>PSE Kominfo registration submission untuk OBP umbrella + 4 SparkMind subdomain</td><td>Submission receipt</td></tr><tr><td>D10</td><td>Privacy Policy + T&C v1.0 generated untuk 6 domain</td><td>Docs published</td></tr><tr><td>D11</td><td><code>@sparkmind/disclosure</code> package implementation + integration ke ui-kit</td><td>Package published</td></tr><tr><td>D12</td><td>DPO contact channel + <code>/api/pdp/request/*</code> endpoint scaffold</td><td>API stub</td></tr><tr><td>D13</td><td>BarberKas checkout flow integration via OBP routing — sandbox test</td><td>Pass test</td></tr><tr><td>D14</td><td>First live transaction BK → OBP → Duitku → settle to OBP account → entitlement update di BK</td><td>Live demo complete</td></tr></tbody></table>
+
+<h3 id="19-3-d60-obp-mor-pillar-target">19.3 D60 OBP-MoR Pillar Target</h3>
+
+<table class="doctrine-table"><thead><tr><th>Item</th><th>Now</th><th>D60</th></tr></thead><tbody><tr><td>OBP entity verification</td><td>60/100</td><td>100/100</td></tr><tr><td>Cross-brand routing</td><td>0/100</td><td>95/100</td></tr><tr><td>PSE registration</td><td>0/100</td><td>100/100</td></tr><tr><td>Disclosure footer compliance</td><td>0/100</td><td>100/100</td></tr><tr><td>DPO + UU PDP compliance</td><td>10/100</td><td>85/100</td></tr><tr><td>Settlement reconciliation</td><td>0/100</td><td>80/100</td></tr><tr><td><strong>OBP-MoR Pillar Composite</strong></td><td><strong>60/100</strong></td><td><strong>92/100 GREEN</strong></td></tr></tbody></table>
+
+<hr class="sovereign-hr">
+
+<h2 id="20-quick-start-paste-untuk-session-baru">§20 · QUICK-START PASTE (untuk session baru)</h2>
+<p>Untuk bootstrap sesi baru dengan AI Dev co-architect, paste 3 baris berikut:</p>
+
+<pre class="code lang-text"><code>
+@Sovereign-Architect v7.0
+Sprint Day: D&lt;N&gt;/D60 (Sovereign Parallel Sprint, 4-LANE + LANE OBP)
+Context: Mother brand SparkMind (sparkmind.web.id) + Merchant-of-Record Oasis BI Pro (oasis-bi-pro.web.id). 4-Layer Lock: Brand · Merchant · Domain · Compliance.
+</code></pre>
+
+<hr class="sovereign-hr">
+<p><strong>END OF MASTER-ARCHITECT-PROMPT v7.0</strong></p>
+
+</section>
+
+<section class="module" id="module-2">
+
+<hr class="sovereign-hr">
+
+<h1 id="deep-research-obp-hybrid-strategy-v2-0">🔍 DEEP RESEARCH — OBP HYBRID STRATEGY v2.0</h1>
+
+<h2 id="sparkmind-oasis-bi-pro-merchant-of-record-hybrid-indonesia-primary-jurisdiction">SparkMind ⇄ Oasis BI Pro · Merchant-of-Record Hybrid · Indonesia Primary Jurisdiction</h2>
+<p><strong>Codename</strong>: <code>DR-OBP-HYBRID v2.0</code></p>
+<p><strong>Doctrine Date</strong>: 2026-05-21</p>
+<p><strong>Owner</strong>: Reza Estes / Haidar — Sovereign AI Dev (single-operator)</p>
+<p><strong>Jurisdiction Primary</strong>: 🇮🇩 Indonesia (BI · OJK · PSE Kominfo · UU PDP)</p>
+<p><strong>Status</strong>: 🔒 CANONICAL · EXECUTE-READY · PUBLIC-SAFE</p>
+<p><strong>Supersedes</strong>: <code>DR-OBP-HYBRID-v1.0.md</code> (2026-05-19)</p>
+<p><strong>Companion of</strong>: <code>MASTER-ARCHITECT-PROMPT v7.0</code></p>
+
+<hr class="sovereign-hr">
+
+<h2 id="00-tl-dr-kenapa-obp-hybrid">§00 · TL;DR — KENAPA OBP-HYBRID</h2>
+<p>SparkMind sebagai <strong>mother brand publik</strong> belum lulus verifikasi merchant Duitku/Xendit (kategori produk + nama brand + agregator-look-alike). Oasis BI Pro (<code>oasis-bi-pro.web.id</code>) <strong>sudah lulus verifikasi</strong> dan live menerima pembayaran. Daripada menunda peluncuran ekosistem SparkMind, doctrine v7.0 menetapkan <strong>MoR (Merchant-of-Record) pattern</strong>:</p>
+
+<pre class="code lang-text"><code>
+SparkMind (brand publik) ───► Oasis BI Pro (merchant legal) ───► Duitku/Xendit (PJP) ───► Bank Indonesia
+       ↑ marketing/UX             ↑ MoR/settlement/invoice         ↑ payment processing        ↑ regulator
+</code></pre>
+<p><strong>Verdict legal (Indonesia 2026)</strong>: ✅ Pattern ini <strong>diperbolehkan</strong> dengan disclosure + perjanjian kerjasama tertulis + pengakuan Oasis BI Pro sebagai entitas yang menerbitkan invoice dan menerima dana. Identik dengan model Stripe/Paddle MoR yang sudah diterima global, dan kompatibel dengan <strong>PBI No. 10/2025</strong> (kerangka baru sistem pembayaran BI, effective 31 Maret 2026).</p>
+
+<hr class="sovereign-hr">
+
+<h2 id="01-regulatory-backbone-indonesia-2026">§01 · REGULATORY BACKBONE — INDONESIA 2026</h2>
+
+<h3 id="1-1-bank-indonesia-bi-sistem-pembayaran">1.1 Bank Indonesia (BI) — Sistem Pembayaran</h3>
+
+<table class="doctrine-table"><thead><tr><th>Regulasi</th><th>Tanggal Efektif</th><th>Relevansi OBP-Hybrid</th></tr></thead><tbody><tr><td><strong>PBI No. 10/2025</strong> (Peraturan BI Sistem Pembayaran)</td><td>31 Maret 2026</td><td>Kerangka induk seluruh PJP. Oasis BI Pro = <strong>merchant</strong>, bukan PJP. Duitku/Xendit = PJP berlisensi.</td></tr><tr><td><strong>PADG No. 32/2025</strong> (Peraturan Anggota Dewan Gubernur)</td><td>31 Maret 2026</td><td>Detail teknis: kategori PJP, RBSP, TIKMI.</td></tr><tr><td><strong>RBSP</strong> (Risk-Based Supervision Plan)</td><td>Submit ≤ 30 April 2026</td><td>Wajib untuk PJP. Untuk merchant: <strong>tidak wajib langsung</strong>, tapi PJP akan minta data merchant due-diligence.</td></tr><tr><td><strong>TIKMI</strong> (Tingkat Kesehatan & Manajemen Inovasi)</td><td>Self-assessment ongoing</td><td>PJP report. Merchant patuhi requirement dari PJP.</td></tr><tr><td><strong>Kategori PJP</strong></td><td>Continuous</td><td>PJSP-A / PJSP-B / PJSP-C. SparkMind/OBP = merchant; tidak masuk kategori PJP selama menggunakan Duitku/Xendit.</td></tr></tbody></table>
+<blockquote><strong>Tindakan</strong>: monitor BI website + Duitku/Xendit changelog setiap kuartal untuk update merchant-side requirements.</blockquote>
+
+<h3 id="1-2-ojk-otoritas-jasa-keuangan">1.2 OJK (Otoritas Jasa Keuangan)</h3>
+
+<table class="doctrine-table"><thead><tr><th>Area</th><th>Status SparkMind/OBP</th><th>Aksi</th></tr></thead><tbody><tr><td><strong>POJK Fintech P2P (10/2022)</strong></td><td>❌ Tidak applicable</td><td>OBP-Hybrid bukan platform peminjaman</td></tr><tr><td><strong>POJK Layanan Pendanaan Securities Crowdfunding (57/2020)</strong></td><td>❌ Tidak applicable</td><td>Tidak ada penerbitan efek</td></tr><tr><td><strong>POJK IKD Inovasi Keuangan Digital (13/2018)</strong></td><td>⚠️ Watchlist — bila menjadi PJP/aggregator</td><td>Re-assess saat scale > 100K user atau revenue > IDR 5M/bulan</td></tr><tr><td><strong>POJK Perlindungan Konsumen Sektor Jasa Keuangan (22/2023)</strong></td><td>✅ Best practice</td><td>Implement complaint channel + ToS publik</td></tr></tbody></table>
+
+<h3 id="1-3-uu-pdp-uu-27-2022-perlindungan-data-pribadi-mk-151-puu-xxii-2024">1.3 UU PDP (UU 27/2022 Perlindungan Data Pribadi) + MK 151/PUU-XXII/2024</h3>
+<p><strong>Putusan MK 151/PUU-XXII/2024 (30 Juli 2025)</strong> — memperluas mandat <strong>Data Protection Officer (DPO)</strong>:</p>
+
+<table class="doctrine-table"><thead><tr><th>Item</th><th>Pre-MK 151</th><th>Post-MK 151 (sekarang)</th></tr></thead><tbody><tr><td>Threshold DPO</td><td>"Skala besar" (subyektif)</td><td>Skala bisnis fintech-level → <strong>likely wajib</strong>, tanpa kuantitatif threshold</td></tr><tr><td>Penunjukan DPO</td><td>Opsional</td><td><strong>Wajib formal</strong> untuk PSE Lingkup Privat yang memproses data finansial</td></tr><tr><td>Self-appointment</td><td>Ambigu</td><td>✅ Diperbolehkan untuk single-operator (Haidar = DPO + Owner)</td></tr><tr><td>Publikasi kontak DPO</td><td>Best-practice</td><td><strong>Wajib</strong> — footer + privacy-policy + dedicated email (<code>dpo@oasis-bi-pro.web.id</code>)</td></tr></tbody></table>
+<p><strong>Aksi v7.0</strong>:</p>
+<ol>
+<li>Haidar appoint diri sebagai <strong>DPO (Data Protection Officer)</strong> secara formal — buat letter of appointment internal</li>
+<li>Setup <code>dpo@oasis-bi-pro.web.id</code> (alias ke inbox owner)</li>
+<li>Tambahkan DPO contact di Privacy Policy + footer semua subdomain</li>
+<li>Buat <strong>DPIA (Data Protection Impact Assessment)</strong> sederhana untuk flow checkout</li>
+</ol>
+
+<h3 id="1-4-pse-kominfo-permenkominfo-5-2020">1.4 PSE Kominfo (Permenkominfo 5/2020)</h3>
+<p><strong>Pendaftaran PSE Lingkup Privat</strong> WAJIB untuk semua sistem elektronik yang:</p>
+<ul>
+<li>Menyediakan, mengelola, atau mengoperasikan transaksi finansial</li>
+<li>Memproses data pribadi pengguna Indonesia</li>
+<li>Memiliki jumlah pengguna ≥ batas tertentu</li>
+</ul>
+<p><strong>Strategi single-umbrella vs per-subdomain</strong>:</p>
+
+<table class="doctrine-table"><thead><tr><th>Pola</th><th>Pro</th><th>Con</th><th>Verdict</th></tr></thead><tbody><tr><td><strong>A. Single umbrella</strong> — daftar 1 PSE atas nama Oasis BI Pro, list semua subdomain sebagai "domain operasional"</td><td>Cepat, biaya kecil, 1 contact point</td><td>Bila salah satu subdomain bermasalah, semua subdomain di-flag</td><td>⭐ <strong>Recommended</strong> untuk D60 sprint</td></tr><tr><td><strong>B. Per-subdomain</strong> — daftar tiap brand sebagai PSE terpisah</td><td>Isolasi risiko, brand-specific compliance</td><td>Beban admin 4×, biaya 4×, complexity 4×</td><td>Defer ke v8.0 saat skala > 50K MAU</td></tr></tbody></table>
+<p><strong>Subdomain wajib dicantumkan</strong>:</p>
+
+<pre class="code lang-text"><code>
+sparkmind.web.id (mother)
+oasis-bi-pro.web.id (merchant)
+pay.oasis-bi-pro.web.id (checkout)
+barberkas.sparkmind.web.id
+kuratorkas.sparkmind.web.id
+pacelokal.sparkmind.web.id (RLO)
+nurani.os.sparkmind.web.id
+</code></pre>
+
+<hr class="sovereign-hr">
+
+<h2 id="02-merchant-of-record-mor-pattern-deep-dive">§02 · MERCHANT-OF-RECORD (MoR) PATTERN — DEEP DIVE</h2>
+
+<h3 id="2-1-definisi-mor">2.1 Definisi MoR</h3>
+<p><strong>Merchant-of-Record</strong> adalah entitas legal yang:</p>
+<ul>
+<li>Tercantum di <strong>invoice</strong> sebagai penjual</li>
+<li>Menerima <strong>dana settlement</strong> dari PJP</li>
+<li>Bertanggung jawab atas <strong>pajak (PPN/PPh)</strong> transaksi</li>
+<li>Menjadi <strong>counterparty legal</strong> untuk customer dispute</li>
+<li>Patuh pada <strong>AML/KYC + chargeback policy</strong> PJP</li>
+</ul>
+<p><strong>Brand layer</strong> (SparkMind) = marketing, UX, produk. <strong>Tidak menerima dana langsung</strong>, tidak masuk invoice utama, tidak menerbitkan pajak.</p>
+
+<h3 id="2-2-pattern-comparison-global">2.2 Pattern Comparison (Global)</h3>
+
+<table class="doctrine-table"><thead><tr><th>Provider Global</th><th>Model</th><th>Indonesia Equivalent</th></tr></thead><tbody><tr><td>Stripe Atlas</td><td>MoR untuk startup global</td><td>Oasis BI Pro pattern</td></tr><tr><td>Paddle</td><td>Full MoR (tax + dispute + invoice)</td><td>OBP-Hybrid (subset, no tax-on-behalf yet)</td></tr><tr><td>Lemonsqueezy</td><td>MoR untuk creators</td><td>OBP pattern untuk SparkMind sub-brands</td></tr><tr><td>RevenueCat (subs)</td><td>NOT MoR, hanya routing</td><td>❌ Tidak applicable</td></tr></tbody></table>
+
+<h3 id="2-3-validasi-legal-indonesia-2026">2.3 Validasi Legal Indonesia (2026)</h3>
+
+<table class="doctrine-table"><thead><tr><th>Pertanyaan</th><th>Jawaban</th><th>Sumber</th></tr></thead><tbody><tr><td>Boleh satu entitas (OBP) menerima dana untuk multi-brand (SparkMind sub-brands)?</td><td>✅ Ya, dengan disclosure + perjanjian B2B internal</td><td>KUH Perdata pasal 1320 (perjanjian sah), UU PT</td></tr><tr><td>Wajib lapor ke BI bila OBP jadi MoR untuk 4 sub-brand?</td><td>❌ Tidak, selama OBP tetap "merchant" di Duitku/Xendit</td><td>PBI 10/2025 §IV (definisi merchant vs PJP)</td></tr><tr><td>Wajib disclosure ke customer?</td><td>✅ Ya, di checkout page + invoice + footer</td><td>UU 8/1999 Perlindungan Konsumen pasal 4</td></tr><tr><td>Pajak PPN: ditanggung OBP atau sub-brand?</td><td>✅ OBP (sebagai MoR penerbit invoice)</td><td>UU HPP 7/2021</td></tr><tr><td>KYC merchant tetap di OBP atau ditambah per sub-brand?</td><td>OBP-level cukup; sub-brand cukup attestation</td><td>Duitku/Xendit policy + POJK 22/2023</td></tr></tbody></table>
+
+<hr class="sovereign-hr">
+
+<h2 id="03-alternatif-yang-di-reject">§03 · ALTERNATIF YANG DI-REJECT</h2>
+
+<table class="doctrine-table"><thead><tr><th>Opsi</th><th>Kenapa Di-Reject</th></tr></thead><tbody><tr><td><strong>A. Tunggu SparkMind verified Duitku</strong></td><td>Estimasi 60-120 hari (kategori "ekosistem aggregator" sensitif). Membunuh momentum sprint D60.</td></tr><tr><td><strong>C. Bikin PT formal untuk SparkMind</strong></td><td>Cost IDR 5-15jt, 30-60 hari, butuh modal disetor, tidak fit single-operator stage.</td></tr><tr><td><strong>D. Pakai personal Bank account + manual invoice</strong></td><td>Melanggar best-practice ToS Duitku/Xendit (harus entitas yg di-KYC), risk freezing.</td></tr><tr><td><strong>E. Routing via 3rd-party MoR (Paddle/Lemonsqueezy)</strong></td><td>Forex fee + chargeback latency + tidak QRIS-native. Indonesia customer butuh QRIS/BCA VA.</td></tr></tbody></table>
+<p><strong>Verdict</strong>: Opsi <strong>B (OBP-Hybrid)</strong> adalah satu-satunya yang <strong>fast + legal + Indonesia-native + sovereign</strong>.</p>
+
+<hr class="sovereign-hr">
+
+<h2 id="04-risk-register-top-10">§04 · RISK REGISTER (TOP 10)</h2>
+
+<table class="doctrine-table"><thead><tr><th>#</th><th>Risiko</th><th>Likelihood</th><th>Impact</th><th>Mitigasi</th></tr></thead><tbody><tr><td>1</td><td>Duitku/Xendit re-verify OBP & minta klarifikasi multi-brand routing</td><td>Medium</td><td>High</td><td>Siapkan disclosure pack + B2B agreement template, proaktif lapor saat onboarding</td></tr><tr><td>2</td><td>Customer dispute → tuntut ke SparkMind, bukan OBP</td><td>Medium</td><td>Medium</td><td>Footer disclosure jelas + ToS jelas (Section "Payment Processing by Oasis BI Pro")</td></tr><tr><td>3</td><td>PSE Kominfo flag subdomain belum terdaftar</td><td>High</td><td>Medium</td><td>D7-D14 sprint: daftar PSE umbrella</td></tr><tr><td>4</td><td>UU PDP audit → no DPO appointed</td><td>Medium</td><td>High</td><td>D1-D7: self-appoint DPO + publish kontak</td></tr><tr><td>5</td><td>OBP nama "Oasis BI Pro" disalahartikan sebagai endorsed BI</td><td>Low</td><td>High</td><td>Tambahkan disclaimer "Not affiliated with Bank Indonesia" di About page</td></tr><tr><td>6</td><td>Tax: PPN tidak dipungut karena belum PKP</td><td>High (saat scale)</td><td>Medium</td><td>Track revenue; saat > IDR 4.8M/tahun → daftar PKP</td></tr><tr><td>7</td><td>Chargeback dari sub-brand customer landed di OBP, dispute internal</td><td>Medium</td><td>Medium</td><td>Internal B2B agreement: tiap sub-brand commit refund pool 5% revenue</td></tr><tr><td>8</td><td>SparkMind brand confusion dengan competitor (SparkMind AI, dll)</td><td>Medium</td><td>Low</td><td>Trademark search + ®  filing di DJKI</td></tr><tr><td>9</td><td>Cloudflare ToS: routing payment via Workers</td><td>Low</td><td>Medium</td><td>Cek Cloudflare ToS — payment processing OK, hanya storage CC data dilarang</td></tr><tr><td>10</td><td>PBI 10/2025 future amendment: redefine "merchant" jadi PJP-C</td><td>Low (5-15%)</td><td>High</td><td>Quarterly review BI website + siap PT formal saat threshold tercapai</td></tr></tbody></table>
+
+<hr class="sovereign-hr">
+
+<h2 id="05-source-reference-stack">§05 · SOURCE & REFERENCE STACK</h2>
+
+<h3 id="5-1-regulator-resmi-primary">5.1 Regulator Resmi (Primary)</h3>
+<ul>
+<li>Bank Indonesia — https://www.bi.go.id/</li>
+<li>OJK — https://www.ojk.go.id/</li>
+<li>Kominfo PSE — https://pse.kominfo.go.id/</li>
+<li>Kemenkominfo Privasi Data — https://privasidata.kominfo.go.id/</li>
+</ul>
+
+<h3 id="5-2-regulasi-spesifik">5.2 Regulasi Spesifik</h3>
+<ul>
+<li>PBI No. 10/2025 — Peraturan BI Sistem Pembayaran (effective 31 Maret 2026)</li>
+<li>PADG No. 32/2025 — Detail teknis PJP</li>
+<li>UU No. 27/2022 — Perlindungan Data Pribadi (UU PDP)</li>
+<li>Putusan MK No. 151/PUU-XXII/2024 — DPO mandate expansion (30 Juli 2025)</li>
+<li>Permenkominfo No. 5/2020 — PSE Lingkup Privat</li>
+<li>POJK No. 22/2023 — Perlindungan Konsumen Sektor Jasa Keuangan</li>
+</ul>
+
+<h3 id="5-3-pjp-operasional">5.3 PJP Operasional</h3>
+<ul>
+<li>Duitku — https://duitku.com/</li>
+<li>Xendit — https://www.xendit.co/id/</li>
+</ul>
+
+<h3 id="5-4-analisis-legal-pihak-ketiga-cross-check">5.4 Analisis Legal Pihak Ketiga (cross-check)</h3>
+<ul>
+<li>AHP Law Firm (BI Regulation 10/2025 analysis)</li>
+<li>Baker McKenzie (Indonesia Payment System update 2026)</li>
+<li>SSEK Indonesian Legal Consultants (Reform analysis)</li>
+<li>ABNR Counsellors at Law (UU PDP DPO guidance)</li>
+</ul>
+
+<hr class="sovereign-hr">
+
+<h2 id="06-applicability-matrix-per-sub-brand">§06 · APPLICABILITY MATRIX — Per Sub-Brand</h2>
+
+<table class="doctrine-table"><thead><tr><th>Sub-Brand</th><th>URL</th><th>Produk</th><th>MoR via OBP</th><th>Disclosure di Checkout</th></tr></thead><tbody><tr><td><strong>BarberKas</strong></td><td>barberkas.sparkmind.web.id</td><td>POS untuk barbershop</td><td>✅ Yes</td><td>"Payments processed by Oasis BI Pro"</td></tr><tr><td><strong>KuratorKas</strong></td><td>kuratorkas.sparkmind.web.id</td><td>Curator/educator POS</td><td>✅ Yes</td><td>Same disclosure</td></tr><tr><td><strong>PaceLokal (RLO)</strong></td><td>pacelokal.sparkmind.web.id</td><td>Race event registration</td><td>✅ Yes</td><td>Same disclosure + race-specific T&C</td></tr><tr><td><strong>Nurani.OS</strong></td><td>nurani.os.sparkmind.web.id</td><td>Sovereign Spiritual OS membership</td><td>✅ Yes</td><td>Same disclosure</td></tr><tr><td><strong>Oasis BI Pro</strong></td><td>oasis-bi-pro.web.id</td><td>Operator showcase (B2B leads)</td><td>Native (own merchant)</td><td>N/A</td></tr></tbody></table>
+
+<hr class="sovereign-hr">
+
+<h2 id="07-key-decisions-summary-table">§07 · KEY DECISIONS — SUMMARY TABLE</h2>
+
+<table class="doctrine-table"><thead><tr><th>Decision</th><th>v1.0</th><th>v2.0 (this doc)</th></tr></thead><tbody><tr><td>MoR pattern</td><td>Confirmed ✅</td><td>Re-validated dengan PBI 10/2025</td></tr><tr><td>PSE strategy</td><td>TBD</td><td><strong>Single umbrella</strong> under OBP</td></tr><tr><td>DPO appointment</td><td>Suggested</td><td><strong>MANDATORY</strong> — Haidar self-appoint</td></tr><tr><td>Disclosure footer</td><td>Draft</td><td><strong>Locked template</strong> (see §08.5 in v7.0 master)</td></tr><tr><td>Risk top-10</td><td>7 items</td><td><strong>10 items</strong> (added PSE flag, brand confusion, BI amendment)</td></tr></tbody></table>
+
+<hr class="sovereign-hr">
+<p><strong>END OF DR-OBP-HYBRID v2.0</strong></p>
+<p><em>Doctrine date: 2026-05-21 · Owner: Haidar · Status: CANONICAL · Public-Safe · Execute-Ready</em></p>
+<p><em>Supersedes: DR-OBP-HYBRID v1.0 · Companion of: MASTER-ARCHITECT-PROMPT v7.0</em></p>
+
+</section>
+
+<section class="module" id="module-3">
+
+<hr class="sovereign-hr">
+
+<h1 id="payment-flow-v2-0-obp-merchant-of-record-routing">💳 PAYMENT FLOW v2.0 — OBP MERCHANT-OF-RECORD ROUTING</h1>
+
+<h2 id="checkout-settlement-reconciliation-disclosure">Checkout · Settlement · Reconciliation · Disclosure</h2>
+<p><strong>Codename</strong>: <code>PAYMENT-FLOW-OBP v2.0</code></p>
+<p><strong>Doctrine Date</strong>: 2026-05-21</p>
+<p><strong>Owner</strong>: Haidar — Sovereign AI Dev</p>
+<p><strong>Status</strong>: 🔒 CANONICAL · EXECUTE-READY</p>
+<p><strong>Supersedes</strong>: <code>PAYMENT-FLOW-OBP-v1.0.md</code></p>
+<p><strong>Companion of</strong>: <code>MASTER-ARCHITECT-PROMPT v7.0</code> · <code>DR-OBP-HYBRID v2.0</code></p>
+
+<hr class="sovereign-hr">
+
+<h2 id="00-flow-overview">§00 · FLOW OVERVIEW</h2>
+
+<pre class="code lang-text"><code>
+┌──────────────────┐    1.click pay   ┌──────────────────────┐  2.create invoice
+│ Customer         │ ───────────────► │ Sub-Brand Frontend   │ ─────────────────┐
+│ (sparkmind.id)   │                  │ (e.g., BarberKas UI) │                  │
+└──────────────────┘                  └──────────────────────┘                  ▼
+        ▲                                       ▲                  ┌─────────────────────┐
+        │ 6. entitlement                        │ 5. webhook       │ pay.oasis-bi-pro.   │
+        │ activate                              └──────────────────│ web.id (OBP checkout│
+        │                                                          │ orchestrator)        │
+        └──────────────────────────────────────────────────────────└─────────────────────┘
+                                                                          │ 3. forward
+                                                                          ▼
+                                                              ┌─────────────────────┐
+                                                              │ Duitku / Xendit PJP │
+                                                              └─────────────────────┘
+                                                                          │ 4. settle
+                                                                          ▼
+                                                              ┌─────────────────────┐
+                                                              │ OBP Bank Account    │
+                                                              └─────────────────────┘
+</code></pre>
+
+<h3 id="tujuh-langkah-inti">Tujuh langkah inti</h3>
+<ol>
+<li>Customer click "Bayar" di sub-brand frontend (mis. BarberKas).</li>
+<li>Frontend call OBP-Checkout API → OBP buat <strong>invoice atas nama Oasis BI Pro</strong> (bukan sub-brand) dengan metadata <code>sub_brand_id</code>.</li>
+<li>OBP forward request ke Duitku/Xendit → terima <code>checkout_url</code>.</li>
+<li>Customer bayar → Duitku/Xendit settle ke rekening OBP.</li>
+<li>PJP fire webhook ke <code>pay.oasis-bi-pro.web.id/webhooks/{provider}</code> → OBP verify signature.</li>
+<li>OBP fire internal event ke sub-brand backend (<code>event: payment.settled</code>) untuk activate entitlement (e.g., subscription, ticket, license).</li>
+<li>Customer terima receipt (atas nama OBP) + entitlement activation.</li>
+</ol>
+
+<hr class="sovereign-hr">
+
+<h2 id="01-checkout-endpoints-contract">§01 · CHECKOUT ENDPOINTS (CONTRACT)</h2>
+
+<h3 id="1-1-create-invoice-sub-brand-obp">1.1 Create Invoice (sub-brand → OBP)</h3>
+
+<pre class="code lang-http"><code>
+POST https://pay.oasis-bi-pro.web.id/v1/invoices
+Authorization: Bearer &lt;SUB_BRAND_API_KEY&gt;
+Content-Type: application/json
+
+{
+  &quot;sub_brand_id&quot;: &quot;barberkas&quot;,
+  &quot;external_ref&quot;: &quot;BK-INV-20260521-0001&quot;,
+  &quot;amount_idr&quot;: 49000,
+  &quot;description&quot;: &quot;BarberKas Pro · Monthly Subscription&quot;,
+  &quot;customer&quot;: {
+    &quot;name&quot;: &quot;Budi Santoso&quot;,
+    &quot;email&quot;: &quot;budi@example.com&quot;,
+    &quot;phone&quot;: &quot;+6281234567890&quot;
+  },
+  &quot;callback_url&quot;: &quot;https://barberkas.sparkmind.web.id/payment/return&quot;,
+  &quot;metadata&quot;: {
+    &quot;plan&quot;: &quot;pro_monthly&quot;,
+    &quot;user_id&quot;: &quot;bk_user_12345&quot;
+  }
+}
+</code></pre>
+<p><strong>Response 201</strong>:</p>
+
+<pre class="code lang-json"><code>
+{
+  &quot;invoice_id&quot;: &quot;obp_inv_abc123&quot;,
+  &quot;checkout_url&quot;: &quot;https://pay.oasis-bi-pro.web.id/checkout/obp_inv_abc123&quot;,
+  &quot;expires_at&quot;: &quot;2026-05-21T12:00:00Z&quot;,
+  &quot;merchant_of_record&quot;: &quot;Oasis BI Pro&quot;,
+  &quot;pjp_provider&quot;: &quot;duitku&quot;,
+  &quot;amount_idr&quot;: 49000,
+  &quot;status&quot;: &quot;pending&quot;
+}
+</code></pre>
+
+<h3 id="1-2-webhook-obp-sub-brand">1.2 Webhook (OBP → sub-brand)</h3>
+
+<pre class="code lang-http"><code>
+POST https://barberkas.sparkmind.web.id/webhooks/obp
+X-OBP-Signature: &lt;hmac_sha256&gt;
+Content-Type: application/json
+
+{
+  &quot;event&quot;: &quot;payment.settled&quot;,
+  &quot;invoice_id&quot;: &quot;obp_inv_abc123&quot;,
+  &quot;external_ref&quot;: &quot;BK-INV-20260521-0001&quot;,
+  &quot;amount_idr&quot;: 49000,
+  &quot;settled_at&quot;: &quot;2026-05-21T10:32:14Z&quot;,
+  &quot;pjp&quot;: &quot;duitku&quot;,
+  &quot;pjp_ref&quot;: &quot;DTK-TXN-99887766&quot;,
+  &quot;metadata&quot;: { &quot;plan&quot;: &quot;pro_monthly&quot;, &quot;user_id&quot;: &quot;bk_user_12345&quot; }
+}
+</code></pre>
+<p><strong>Sub-brand MUST verify HMAC</strong>:</p>
+
+<pre class="code lang-text"><code>
+expected = HMAC_SHA256(OBP_WEBHOOK_SECRET, raw_body)
+if not constant_time_eq(expected, header_signature): reject 401
+</code></pre>
+
+<hr class="sovereign-hr">
+
+<h2 id="02-pjp-routing-table">§02 · PJP ROUTING TABLE</h2>
+
+<table class="doctrine-table"><thead><tr><th>Payment Method</th><th>PJP Primary</th><th>PJP Failover</th><th>Fee (Approx)</th><th>Settlement T+</th></tr></thead><tbody><tr><td>QRIS</td><td>Duitku</td><td>Xendit</td><td>0.7%</td><td>T+1</td></tr><tr><td>BCA VA</td><td>Duitku</td><td>Xendit</td><td>IDR 4,000 flat</td><td>T+1</td></tr><tr><td>BNI/Mandiri/BRI VA</td><td>Duitku</td><td>Xendit</td><td>IDR 4,000 flat</td><td>T+1</td></tr><tr><td>Credit Card (Visa/MC)</td><td>Xendit</td><td>Duitku</td><td>2.9% + IDR 2,500</td><td>T+2</td></tr><tr><td>GoPay/OVO/Dana ShopeePay</td><td>Duitku</td><td>Xendit</td><td>1.5-2.0%</td><td>T+1</td></tr><tr><td>Alfamart/Indomaret</td><td>Duitku</td><td>—</td><td>IDR 5,000 flat</td><td>T+1</td></tr></tbody></table>
+<p><strong>Routing rule</strong>:</p>
+<ul>
+<li>Default: Duitku (lower fee QRIS/VA)</li>
+<li>Credit Card: Xendit (better acceptance rate)</li>
+<li>Auto-failover: if PJP returns 5xx ≥ 3× in 60s → switch route</li>
+</ul>
+
+<hr class="sovereign-hr">
+
+<h2 id="03-settlement-reconciliation">§03 · SETTLEMENT & RECONCILIATION</h2>
+
+<h3 id="3-1-settlement-flow">3.1 Settlement Flow</h3>
+<ol>
+<li>PJP settle ke rekening <strong>Oasis BI Pro</strong> (BCA <code>xxx-xxx-xxxx</code>)</li>
+<li>OBP daily-job (<code>02:00 WIB</code>) pull <code>settlement_report</code> dari Duitku + Xendit API</li>
+<li>Match transactions: <code>pjp_ref</code> ↔ <code>obp_invoice_id</code> ↔ <code>sub_brand.external_ref</code></li>
+<li>Update tabel <code>obp.settlements</code> + <code>obp.brand_ledger</code></li>
+<li>Generate per-sub-brand <strong>monthly statement</strong> (PDF) untuk internal audit</li>
+</ol>
+
+<h3 id="3-2-brand-ledger-internal-b2b">3.2 Brand Ledger (Internal B2B)</h3>
+
+<table class="doctrine-table"><thead><tr><th>Field</th><th>Type</th><th>Notes</th></tr></thead><tbody><tr><td><code>id</code></td><td>UUID</td><td>PK</td></tr><tr><td><code>sub_brand_id</code></td><td>enum</td><td><code>barberkas</code> / <code>kuratorkas</code> / <code>pacelokal</code> / <code>nuranios</code></td></tr><tr><td><code>month</code></td><td>YYYY-MM</td><td>Period</td></tr><tr><td><code>gross_idr</code></td><td>bigint</td><td>Sum of settled invoices</td></tr><tr><td><code>pjp_fee_idr</code></td><td>bigint</td><td>Aggregated PJP fees</td></tr><tr><td><code>mor_fee_idr</code></td><td>bigint</td><td>OBP overhead (default 1% gross, configurable)</td></tr><tr><td><code>net_payable_idr</code></td><td>bigint</td><td><code>gross - pjp_fee - mor_fee</code></td></tr><tr><td><code>refund_pool_idr</code></td><td>bigint</td><td>5% gross held for 60d chargeback window</td></tr><tr><td><code>payout_status</code></td><td>enum</td><td><code>pending</code> / <code>paid</code> / <code>held</code></td></tr></tbody></table>
+
+<h3 id="3-3-internal-b2b-payout">3.3 Internal B2B Payout</h3>
+<ul>
+<li>Monthly settlement OBP → sub-brand operating accounts (internal bookkeeping, same beneficial owner Haidar)</li>
+<li>Bookkeeping: every cross-account move logged in <code>obp.internal_transfers</code> with reason code</li>
+</ul>
+
+<hr class="sovereign-hr">
+
+<h2 id="04-idempotency-failure-handling">§04 · IDEMPOTENCY & FAILURE HANDLING</h2>
+
+<h3 id="4-1-idempotency-keys">4.1 Idempotency Keys</h3>
+<ul>
+<li>All <code>POST /invoices</code> requests MUST include <code>Idempotency-Key: &lt;uuid&gt;</code> header</li>
+<li>OBP caches response 24h. Repeat request → returns cached response, not duplicate invoice.</li>
+</ul>
+
+<h3 id="4-2-webhook-retry-policy">4.2 Webhook Retry Policy</h3>
+
+<table class="doctrine-table"><thead><tr><th>Attempt</th><th>Delay</th></tr></thead><tbody><tr><td>1</td><td>Immediate</td></tr><tr><td>2</td><td>30s</td></tr><tr><td>3</td><td>2min</td></tr><tr><td>4</td><td>10min</td></tr><tr><td>5</td><td>1h</td></tr><tr><td>6</td><td>6h</td></tr><tr><td>7-10</td><td>24h exponential</td></tr></tbody></table>
+<p>After 10 failures → mark <code>webhook_dead</code>, alert Haidar via Slack <code>#obp-payment-alerts</code>.</p>
+
+<h3 id="4-3-reconciliation-drift">4.3 Reconciliation Drift</h3>
+<ul>
+<li>Daily reconciliation job compares OBP ledger vs PJP report</li>
+<li>Drift > IDR 1,000 OR > 0.1% → flag for manual review</li>
+<li>Drift > IDR 50,000 OR > 1% → P1 incident, stop new checkouts</li>
+</ul>
+
+<hr class="sovereign-hr">
+
+<h2 id="05-disclosure-ux-wajib">§05 · DISCLOSURE & UX (WAJIB)</h2>
+
+<h3 id="5-1-checkout-page-footer-locked-template">5.1 Checkout Page Footer (locked template)</h3>
+
+<pre class="code lang-text"><code>
+Pembayaran diproses oleh Oasis BI Pro (oasis-bi-pro.web.id) sebagai
+Merchant-of-Record untuk ekosistem SparkMind. Pemrosesan kartu/bank
+melalui PJP Duitku/Xendit yang terdaftar di Bank Indonesia.
+</code></pre>
+
+<h3 id="5-2-invoice-header">5.2 Invoice Header</h3>
+
+<pre class="code lang-text"><code>
+Penerbit Invoice : Oasis BI Pro
+NPWP             : &lt;OBP NPWP&gt;
+Untuk Produk     : &lt;Sub-Brand Name&gt; (sub-brand ekosistem SparkMind)
+</code></pre>
+
+<h3 id="5-3-receipt-email">5.3 Receipt Email</h3>
+<ul>
+<li>From: <code>billing@oasis-bi-pro.web.id</code></li>
+<li>Subject: <code>Bukti Pembayaran #&lt;invoice_id&gt; · &lt;sub-brand&gt;</code></li>
+<li>Body mention BOTH OBP (as MoR) AND sub-brand (as product)</li>
+</ul>
+
+<hr class="sovereign-hr">
+
+<h2 id="06-security-checklist">§06 · SECURITY CHECKLIST</h2>
+
+<table class="doctrine-table"><thead><tr><th>#</th><th>Control</th><th>Implementation</th><th>Status</th></tr></thead><tbody><tr><td>1</td><td>TLS 1.2+ everywhere</td><td>Cloudflare default</td><td>✅ Default</td></tr><tr><td>2</td><td>Webhook HMAC signature verification</td><td><code>OBP_WEBHOOK_SECRET</code> per sub-brand</td><td>⏳ D5</td></tr><tr><td>3</td><td>API key rotation policy</td><td>90 days, manual</td><td>⏳ D10</td></tr><tr><td>4</td><td>No PAN/CVV storage in OBP</td><td>Tokenize via PJP only</td><td>✅ Architecture rule</td></tr><tr><td>5</td><td>Audit log all <code>/invoices</code> writes</td><td>Cloudflare D1 + R2 archive</td><td>⏳ D7</td></tr><tr><td>6</td><td>Rate limit checkout endpoint</td><td>60 req/min/IP via Cloudflare Rules</td><td>⏳ D3</td></tr><tr><td>7</td><td>Webhook replay protection</td><td>Nonce check + timestamp ±5min window</td><td>⏳ D5</td></tr><tr><td>8</td><td>Refund flow requires 2-step confirmation</td><td>UI + Slack approval</td><td>⏳ D14</td></tr></tbody></table>
+
+<hr class="sovereign-hr">
+
+<h2 id="07-test-scenarios-smoke">§07 · TEST SCENARIOS (SMOKE)</h2>
+
+<table class="doctrine-table"><thead><tr><th>Test ID</th><th>Scenario</th><th>Expected</th></tr></thead><tbody><tr><td>T1</td><td>QRIS happy-path BarberKas IDR 49,000</td><td>Invoice created → paid → webhook fired → entitlement active</td></tr><tr><td>T2</td><td>BCA VA expired (timeout > 24h)</td><td>Invoice → <code>expired</code>, no settlement, no entitlement</td></tr><tr><td>T3</td><td>Webhook delivery fails 3×</td><td>Retried at 30s, 2min, 10min; alert if dead</td></tr><tr><td>T4</td><td>Duplicate <code>Idempotency-Key</code></td><td>Returns cached invoice, no double-charge</td></tr><tr><td>T5</td><td>Customer dispute → chargeback via Duitku</td><td>OBP receive chargeback notice → debit sub-brand refund pool</td></tr><tr><td>T6</td><td>Daily reconciliation drift IDR 0</td><td>Job pass, no alert</td></tr><tr><td>T7</td><td>Refund partial IDR 20,000 from IDR 49,000 invoice</td><td>PJP refund → OBP ledger adjust → sub-brand notified</td></tr></tbody></table>
+
+<hr class="sovereign-hr">
+<p><strong>END OF PAYMENT-FLOW-OBP v2.0</strong></p>
+<p><em>Doctrine date: 2026-05-21 · Owner: Haidar · Status: CANONICAL · Execute-Ready</em></p>
+
+</section>
+
+<section class="module" id="module-4">
+
+<hr class="sovereign-hr">
+
+<h1 id="brand-architecture-v2-0-4-layer-separation-doctrine">🏛️ BRAND ARCHITECTURE v2.0 — 4-LAYER SEPARATION DOCTRINE</h1>
+
+<h2 id="brand-merchant-domain-compliance-locked-lanes">Brand · Merchant · Domain · Compliance — Locked Lanes</h2>
+<p><strong>Codename</strong>: <code>BRAND-ARCH-4LAYER v2.0</code></p>
+<p><strong>Doctrine Date</strong>: 2026-05-21</p>
+<p><strong>Owner</strong>: Haidar — Sovereign AI Dev</p>
+<p><strong>Status</strong>: 🔒 CANONICAL · EXECUTE-READY</p>
+<p><strong>Supersedes</strong>: <code>BRAND-ARCH-4LAYER-v1.0.md</code></p>
+<p><strong>Companion of</strong>: <code>MASTER-ARCHITECT-PROMPT v7.0</code></p>
+
+<hr class="sovereign-hr">
+
+<h2 id="00-doctrine-statement">§00 · DOCTRINE STATEMENT</h2>
+<blockquote><strong>"Empat layer terpisah. Tidak boleh dicampur. Tidak boleh disebut sebagai satu entitas. Setiap layer memiliki domain, kontrak, dan compliance-nya sendiri."</strong></blockquote>
+
+<h3 id="mengapa-4-layer">Mengapa 4-Layer?</h3>
+<ol>
+<li><strong>Brand Layer</strong> ≠ <strong>Merchant Layer</strong> karena regulator membedakan "siapa yang menerima dana" vs "siapa yang memasarkan produk"</li>
+<li><strong>Merchant Layer</strong> ≠ <strong>Compliance Layer</strong> karena compliance harus auditable independen, tidak terikat product roadmap</li>
+<li><strong>Domain Layer</strong> ≠ <strong>Brand Layer</strong> karena satu brand bisa punya banyak subdomain, dan satu domain bisa di-redirect tanpa mengubah brand</li>
+</ol>
+
+<hr class="sovereign-hr">
+
+<h2 id="01-layer-map">§01 · LAYER MAP</h2>
+
+<pre class="code lang-text"><code>
+┌─────────────────────────────────────────────────────────────────┐
+│  LAYER 1 · BRAND (publik / naratif / marketing)                  │
+│  ───────────────────────────────────────────────────────────────  │
+│  SparkMind (mother)                                               │
+│   ├── BarberKas (sub-brand)                                       │
+│   ├── KuratorKas (sub-brand)                                      │
+│   ├── PaceLokal / RLO (sub-brand)                                 │
+│   └── Nurani.OS (sub-brand)                                       │
+└─────────────────────────────────────────────────────────────────┘
+                            │
+                            ▼ (all checkout routes via)
+┌─────────────────────────────────────────────────────────────────┐
+│  LAYER 2 · MERCHANT (legal / payment / tax)                      │
+│  ───────────────────────────────────────────────────────────────  │
+│  Oasis BI Pro — single MoR for ALL 4 sub-brands                  │
+│  • Invoice issuer · Tax (PPN) handler · Settlement recipient     │
+└─────────────────────────────────────────────────────────────────┘
+                            │
+                            ▼ (binds to)
+┌─────────────────────────────────────────────────────────────────┐
+│  LAYER 3 · DOMAIN (DNS / SSL / routing)                          │
+│  ───────────────────────────────────────────────────────────────  │
+│  sparkmind.web.id          → mother site                         │
+│  *.sparkmind.web.id        → sub-brand sites                     │
+│  oasis-bi-pro.web.id       → OBP operator site                   │
+│  pay.oasis-bi-pro.web.id   → checkout orchestrator               │
+│  api.sparkmind.web.id      → public API gateway                  │
+└─────────────────────────────────────────────────────────────────┘
+                            │
+                            ▼ (audited under)
+┌─────────────────────────────────────────────────────────────────┐
+│  LAYER 4 · COMPLIANCE (regulatory / DPO / PSE / audit)           │
+│  ───────────────────────────────────────────────────────────────  │
+│  • PSE Kominfo umbrella  (OBP)                                   │
+│  • DPO appointment (Haidar self-appointed)                       │
+│  • UU PDP DPIA registry                                          │
+│  • PJP merchant agreement (Duitku, Xendit)                       │
+│  • Quarterly compliance review                                   │
+└─────────────────────────────────────────────────────────────────┘
+</code></pre>
+
+<hr class="sovereign-hr">
+
+<h2 id="02-layer-1-brand-doctrine">§02 · LAYER 1 — BRAND DOCTRINE</h2>
+
+<h3 id="2-1-sparkmind-mother-brand">2.1 SparkMind — Mother Brand</h3>
+
+<table class="doctrine-table"><thead><tr><th>Attribute</th><th>Value</th></tr></thead><tbody><tr><td>Type</td><td>Mother brand publik (ecosystem narrative)</td></tr><tr><td>Domain</td><td><code>sparkmind.web.id</code></td></tr><tr><td>Voice</td><td>Sovereign · Spiritual · Tech-first · Bahasa Indonesia + technical English</td></tr><tr><td>Tagline</td><td><em>"Sovereign AI Dev untuk Founder & Komunitas Indonesia"</em></td></tr><tr><td>Tidak menerima dana</td><td>❌ Tidak pernah jadi merchant</td></tr><tr><td>Visual ID</td><td>Logo SparkMind (sovereign sigil) · Color: deep indigo + gold accent</td></tr></tbody></table>
+
+<h3 id="2-2-sub-brand-doctrine-4-lanes-lock">2.2 Sub-Brand Doctrine — 4 LANES LOCK</h3>
+
+<table class="doctrine-table"><thead><tr><th>#</th><th>Sub-Brand</th><th>Domain</th><th>Produk Inti</th><th>Primary Audience</th></tr></thead><tbody><tr><td>1</td><td><strong>BarberKas</strong></td><td><code>barberkas.sparkmind.web.id</code></td><td>POS + kas digital untuk barbershop</td><td>Owner barbershop UMK</td></tr><tr><td>2</td><td><strong>KuratorKas</strong></td><td><code>kuratorkas.sparkmind.web.id</code></td><td>POS + revenue tracking untuk creator/educator</td><td>Curator workshop, dance studio, course creator</td></tr><tr><td>3</td><td><strong>PaceLokal (RLO)</strong></td><td><code>pacelokal.sparkmind.web.id</code></td><td>Race registration + tracker untuk solo runners & lomba lokal</td><td>Runner & race organizer</td></tr><tr><td>4</td><td><strong>Nurani.OS</strong></td><td><code>nurani.os.sparkmind.web.id</code></td><td>Sovereign Spiritual OS — membership & content platform</td><td>Spiritual practitioner sovereignty-seeker</td></tr></tbody></table>
+<p><strong>Lock rule</strong>: Tidak boleh tambah sub-brand ke-5 sebelum D60. Fokus eksekusi.</p>
+
+<h3 id="2-3-brand-narrative-do-don-t">2.3 Brand Narrative — DO / DON'T</h3>
+
+<table class="doctrine-table"><thead><tr><th>✅ DO</th><th>❌ DON'T</th></tr></thead><tbody><tr><td>Sebut SparkMind sebagai "ekosistem"</td><td>Sebut SparkMind sebagai "perusahaan"</td></tr><tr><td>Sub-brand punya identitas visual sendiri</td><td>Pakai SparkMind logo di sub-brand sebagai primary</td></tr><tr><td>Mention Oasis BI Pro hanya di checkout/invoice/footer</td><td>Mention OBP di marketing/landing page</td></tr><tr><td>Cross-link antar sub-brand sebagai "bagian dari SparkMind"</td><td>Cross-promote sub-brand di hero section default</td></tr></tbody></table>
+
+<hr class="sovereign-hr">
+
+<h2 id="03-layer-2-merchant-doctrine">§03 · LAYER 2 — MERCHANT DOCTRINE</h2>
+
+<h3 id="3-1-oasis-bi-pro-merchant-of-record">3.1 Oasis BI Pro — Merchant-of-Record</h3>
+
+<table class="doctrine-table"><thead><tr><th>Attribute</th><th>Value</th></tr></thead><tbody><tr><td>Type</td><td>Merchant-of-Record (MoR) untuk SELURUH sub-brand SparkMind</td></tr><tr><td>Domain</td><td><code>oasis-bi-pro.web.id</code> (operator site) + <code>pay.oasis-bi-pro.web.id</code> (checkout)</td></tr><tr><td>Verified at</td><td>Duitku ✅ · Xendit ⏳ (target D7)</td></tr><tr><td>Bank Account</td><td>BCA atas nama OBP/Haidar (single beneficial owner)</td></tr><tr><td>NPWP</td><td><OBP NPWP> (lengkapi sebelum public launch)</td></tr><tr><td>Voice</td><td>Profesional · Backend-only · Tidak masuk marketing copy</td></tr></tbody></table>
+
+<h3 id="3-2-merchant-brand-contract-internal-b2b">3.2 Merchant ↔ Brand Contract (Internal B2B)</h3>
+<ul>
+<li>Setiap sub-brand sign <strong>internal B2B agreement</strong> dengan OBP (template di <code>/legal/templates/MoR-B2B.md</code>)</li>
+<li>Klausa wajib: revenue split, refund pool 5%, dispute escalation, termination notice</li>
+<li>Walaupun beneficial owner sama (Haidar), kontrak tertulis WAJIB untuk audit trail</li>
+</ul>
+
+<h3 id="3-3-future-mor-migration-plan">3.3 Future MoR Migration Plan</h3>
+<ul>
+<li>Saat scale > 100K MAU atau revenue > IDR 50M/bulan → reconsider:</li>
+<li>Apply PT formal untuk SparkMind → SparkMind jadi own merchant</li>
+<li>Atau apply PJSP-C licence → SparkMind = aggregator</li>
+<li>Defer to <strong>v8.0 doctrine</strong> roadmap</li>
+</ul>
+
+<hr class="sovereign-hr">
+
+<h2 id="04-layer-3-domain-doctrine">§04 · LAYER 3 — DOMAIN DOCTRINE</h2>
+
+<h3 id="4-1-domain-inventory">4.1 Domain Inventory</h3>
+
+<table class="doctrine-table"><thead><tr><th>Domain</th><th>Type</th><th>Role</th><th>DNS Provider</th><th>SSL</th><th>Status</th></tr></thead><tbody><tr><td><code>sparkmind.web.id</code></td><td>Apex</td><td>Mother brand site</td><td>Cloudflare</td><td>Auto</td><td>Live</td></tr><tr><td><code>www.sparkmind.web.id</code></td><td>Subdomain</td><td>Redirect to apex</td><td>Cloudflare</td><td>Auto</td><td>Live</td></tr><tr><td><code>barberkas.sparkmind.web.id</code></td><td>Subdomain</td><td>BarberKas frontend</td><td>Cloudflare</td><td>Auto</td><td>Live</td></tr><tr><td><code>kuratorkas.sparkmind.web.id</code></td><td>Subdomain</td><td>KuratorKas frontend</td><td>Cloudflare</td><td>Auto</td><td>Live</td></tr><tr><td><code>pacelokal.sparkmind.web.id</code></td><td>Subdomain</td><td>PaceLokal (RLO) frontend</td><td>Cloudflare</td><td>Auto</td><td>⏳ D7</td></tr><tr><td><code>nurani.os.sparkmind.web.id</code></td><td>Subdomain</td><td>Nurani.OS frontend</td><td>Cloudflare</td><td>Auto</td><td>⏳ D14</td></tr><tr><td><code>api.sparkmind.web.id</code></td><td>Subdomain</td><td>Public API gateway</td><td>Cloudflare Workers</td><td>Auto</td><td>⏳ D10</td></tr><tr><td><code>oasis-bi-pro.web.id</code></td><td>Apex</td><td>OBP operator site</td><td>Cloudflare</td><td>Auto</td><td>Live</td></tr><tr><td><code>pay.oasis-bi-pro.web.id</code></td><td>Subdomain</td><td>Checkout orchestrator</td><td>Cloudflare Workers</td><td>Auto</td><td>⏳ D5</td></tr><tr><td><code>admin.oasis-bi-pro.web.id</code></td><td>Subdomain</td><td>OBP admin dashboard</td><td>Cloudflare Workers + Access</td><td>Auto</td><td>⏳ D10</td></tr></tbody></table>
+
+<h3 id="4-2-dns-rule">4.2 DNS Rule</h3>
+<ul>
+<li>ALL domains on Cloudflare (100% Cloudflare-Native stack lock)</li>
+<li>DNSSEC enabled</li>
+<li>CAA records: <code>letsencrypt.org</code> + <code>pki.goog</code> only</li>
+<li>No wildcard cert (issue per subdomain via Cloudflare Universal SSL)</li>
+</ul>
+
+<hr class="sovereign-hr">
+
+<h2 id="05-layer-4-compliance-doctrine">§05 · LAYER 4 — COMPLIANCE DOCTRINE</h2>
+
+<h3 id="5-1-compliance-stack">5.1 Compliance Stack</h3>
+
+<table class="doctrine-table"><thead><tr><th>Area</th><th>Owner</th><th>Document</th><th>Review Cycle</th></tr></thead><tbody><tr><td>PSE Kominfo registration</td><td>Haidar</td><td><code>compliance/PSE-umbrella-OBP.pdf</code></td><td>Annual</td></tr><tr><td>UU PDP DPO appointment</td><td>Haidar (self-DPO)</td><td><code>compliance/DPO-appointment.md</code></td><td>On change</td></tr><tr><td>DPIA per sub-brand</td><td>Haidar</td><td><code>compliance/DPIA-{sub-brand}.md</code></td><td>Per major feature</td></tr><tr><td>Privacy Policy</td><td>Haidar</td><td><code>legal/privacy-policy.md</code> (synced per subdomain)</td><td>Quarterly</td></tr><tr><td>Terms of Service</td><td>Haidar</td><td><code>legal/terms-of-service.md</code></td><td>Quarterly</td></tr><tr><td>MoR B2B agreements</td><td>Haidar</td><td><code>legal/MoR-B2B-{sub-brand}.md</code></td><td>Annual</td></tr><tr><td>PJP merchant attestation</td><td>Haidar</td><td><code>compliance/PJP-attestation.md</code></td><td>When PJP requests</td></tr><tr><td>Quarterly compliance audit</td><td>Haidar</td><td><code>compliance/audit-{YYYY-Qn}.md</code></td><td>Quarterly</td></tr></tbody></table>
+
+<h3 id="5-2-audit-cadence">5.2 Audit Cadence</h3>
+<ul>
+<li><strong>Weekly</strong>: webhook health, settlement drift</li>
+<li><strong>Monthly</strong>: PJP statement reconciliation</li>
+<li><strong>Quarterly</strong>: Compliance audit (DPO + PSE + tax)</li>
+<li><strong>Annually</strong>: Full doctrine review + brand architecture re-confirmation</li>
+</ul>
+
+<hr class="sovereign-hr">
+
+<h2 id="06-layer-anti-pattern-forbidden">§06 · LAYER ANTI-PATTERN (FORBIDDEN)</h2>
+
+<table class="doctrine-table"><thead><tr><th>❌ Anti-Pattern</th><th>Why Forbidden</th></tr></thead><tbody><tr><td>Customer mengira "SparkMind" yang menerima dana</td><td>Melanggar disclosure UU 8/1999 Perlindungan Konsumen</td></tr><tr><td>Receipt invoice atas nama "BarberKas" tanpa mention OBP</td><td>Tidak ada legal entity "BarberKas" — invalid invoice</td></tr><tr><td>Marketing page sebut "Powered by Oasis BI Pro" sebagai endorsement</td><td>Confusing brand layer ↔ merchant layer</td></tr><tr><td>OBP punya social media + content marketing sendiri</td><td>OBP = backend; tidak boleh kompetisi dengan SparkMind narrative</td></tr><tr><td>Sub-brand setup own bank account untuk terima dana langsung</td><td>Bypass MoR; ilegal dalam doctrine v7.0</td></tr><tr><td>Pakai personal email Haidar di footer compliance</td><td>DPO contact harus <code>dpo@oasis-bi-pro.web.id</code> (entity-bound)</td></tr><tr><td>Sub-brand 5+ tanpa upgrade v8.0 doctrine</td><td>Violates 4-lane lock</td></tr></tbody></table>
+
+<hr class="sovereign-hr">
+
+<h2 id="07-brand-asset-inventory-checklist">§07 · BRAND ASSET INVENTORY (CHECKLIST)</h2>
+
+<table class="doctrine-table"><thead><tr><th>Asset</th><th>SparkMind</th><th>BarberKas</th><th>KuratorKas</th><th>PaceLokal</th><th>Nurani.OS</th><th>OBP</th></tr></thead><tbody><tr><td>Logo (SVG + PNG)</td><td>✅</td><td>✅</td><td>✅</td><td>⏳</td><td>⏳</td><td>✅</td></tr><tr><td>Color palette</td><td>✅</td><td>✅</td><td>⏳</td><td>⏳</td><td>⏳</td><td>✅</td></tr><tr><td>Typography lock</td><td>✅</td><td>✅</td><td>⏳</td><td>⏳</td><td>⏳</td><td>✅</td></tr><tr><td>Voice guide</td><td>✅</td><td>⏳</td><td>⏳</td><td>⏳</td><td>⏳</td><td>✅</td></tr><tr><td>Favicon</td><td>✅</td><td>✅</td><td>✅</td><td>⏳</td><td>⏳</td><td>✅</td></tr><tr><td>Social meta image (OG)</td><td>✅</td><td>⏳</td><td>⏳</td><td>⏳</td><td>⏳</td><td>⏳</td></tr><tr><td>Email signature</td><td>✅</td><td>⏳</td><td>⏳</td><td>⏳</td><td>⏳</td><td>✅</td></tr><tr><td>Privacy policy localized</td><td>⏳</td><td>⏳</td><td>⏳</td><td>⏳</td><td>⏳</td><td>⏳</td></tr></tbody></table>
+<p><strong>Target D60</strong>: 100% checklist green across all 6 entities.</p>
+
+<hr class="sovereign-hr">
+<p><strong>END OF BRAND-ARCH-4LAYER v2.0</strong></p>
+<p><em>Doctrine date: 2026-05-21 · Owner: Haidar · Status: CANONICAL · Execute-Ready</em></p>
+
+</section>
+
+<section class="module" id="module-5">
+
+<hr class="sovereign-hr">
+
+<h1 id="compliance-risk-matrix-v2-0">⚖️ COMPLIANCE & RISK MATRIX v2.0</h1>
+
+<h2 id="bi-ojk-uu-pdp-pse-kominfo-sparkmind-oasis-bi-pro">BI · OJK · UU PDP · PSE Kominfo — SparkMind / Oasis BI Pro</h2>
+<p><strong>Codename</strong>: <code>COMPLIANCE-RISK-MATRIX v2.0</code></p>
+<p><strong>Doctrine Date</strong>: 2026-05-21</p>
+<p><strong>Owner</strong>: Haidar — Sovereign AI Dev (acting DPO)</p>
+<p><strong>Status</strong>: 🔒 CANONICAL · EXECUTE-READY</p>
+<p><strong>Supersedes</strong>: <code>COMPLIANCE-RISK-MATRIX-v1.0.md</code></p>
+<p><strong>Companion of</strong>: <code>MASTER-ARCHITECT-PROMPT v7.0</code> · <code>DR-OBP-HYBRID v2.0</code></p>
+
+<hr class="sovereign-hr">
+
+<h2 id="00-executive-summary">§00 · EXECUTIVE SUMMARY</h2>
+
+<table class="doctrine-table"><thead><tr><th>Domain</th><th>Status (Now)</th><th>Target D60</th><th>Owner</th></tr></thead><tbody><tr><td>BI (PBI 10/2025 alignment)</td><td>🟡 Aware, not yet impacted</td><td>🟢 Documented attestation</td><td>Haidar</td></tr><tr><td>OJK</td><td>🟢 Not in scope (merchant, not PJP/IKD)</td><td>🟢 Quarterly re-assess</td><td>Haidar</td></tr><tr><td>UU PDP + DPO</td><td>🔴 No DPO appointed</td><td>🟢 DPO appointed + DPIA done</td><td>Haidar</td></tr><tr><td>PSE Kominfo</td><td>🔴 Not registered</td><td>🟢 Umbrella under OBP registered</td><td>Haidar</td></tr><tr><td>PJP Merchant Agreements</td><td>🟡 Duitku live; Xendit pending</td><td>🟢 Both signed + attested</td><td>Haidar</td></tr><tr><td>Tax (PPN/PPh)</td><td>🟡 Not PKP yet</td><td>🟡 Monitor revenue, register PKP saat threshold</td><td>Haidar</td></tr><tr><td>Consumer Protection (POJK 22/2023)</td><td>🟡 ToS draft</td><td>🟢 ToS + complaint channel published</td><td>Haidar</td></tr></tbody></table>
+
+<hr class="sovereign-hr">
+
+<h2 id="01-bank-indonesia-bi-matrix">§01 · BANK INDONESIA (BI) MATRIX</h2>
+
+<h3 id="1-1-pbi-no-10-2025-sistem-pembayaran-effective-31-maret-2026">1.1 PBI No. 10/2025 — Sistem Pembayaran (effective 31 Maret 2026)</h3>
+
+<table class="doctrine-table"><thead><tr><th>Requirement</th><th>Applicable to OBP/SparkMind?</th><th>Action</th></tr></thead><tbody><tr><td>PJP categorization (PJSP-A/B/C)</td><td>❌ Tidak (we are merchant, not PJP)</td><td>Document position in <code>compliance/BI-merchant-position.md</code></td></tr><tr><td>RBSP submission (Risk-Based Supervision Plan)</td><td>❌ Tidak (PJP-only)</td><td>Monitor PJP (Duitku/Xendit) requests on merchant due-diligence</td></tr><tr><td>TIKMI assessment</td><td>❌ Tidak (PJP-only)</td><td>N/A</td></tr><tr><td>Capital requirement</td><td>❌ Tidak</td><td>N/A</td></tr><tr><td>Reporting to BI</td><td>❌ Tidak langsung</td><td>Via Duitku/Xendit aggregated</td></tr><tr><td>Compliance with BI consumer protection rules</td><td>✅ Indirect (via PJP)</td><td>Mirror in our own ToS + Privacy Policy</td></tr></tbody></table>
+
+<h3 id="1-2-bi-risk-triggers-re-assess-if">1.2 BI Risk Triggers (re-assess if)</h3>
+<ul>
+<li>SparkMind/OBP transaction volume > IDR 1B/month</li>
+<li>Number of sub-brands > 10</li>
+<li>We start storing PAN/CVV (forbidden in current doctrine)</li>
+<li>We start cross-border settlement</li>
+<li>We apply for PJSP-C licence</li>
+</ul>
+
+<hr class="sovereign-hr">
+
+<h2 id="02-ojk-matrix">§02 · OJK MATRIX</h2>
+
+<table class="doctrine-table"><thead><tr><th>Regulation</th><th>Scope</th><th>Applicable?</th><th>Action</th></tr></thead><tbody><tr><td>POJK 10/2022 — Fintech P2P</td><td>Lending platforms</td><td>❌</td><td>Not in scope</td></tr><tr><td>POJK 13/2018 — IKD</td><td>Innovation Digital Finance sandbox</td><td>⚠️ Watchlist</td><td>Re-assess saat scale</td></tr><tr><td>POJK 22/2023 — Konsumen Sektor JK</td><td>Consumer protection</td><td>🟡 Best practice</td><td>Implement complaint channel + ToS</td></tr><tr><td>POJK 57/2020 — Securities Crowdfunding</td><td>Equity/debt crowdfunding</td><td>❌</td><td>Not in scope</td></tr><tr><td>POJK 11/2024 — AI in Financial Services</td><td>AI use in finance</td><td>🟡 Watchlist</td><td>Monitor; our AI use is doctrine-aided, not customer-facing decisioning</td></tr></tbody></table>
+
+<hr class="sovereign-hr">
+
+<h2 id="03-uu-pdp-matrix-uu-27-2022-mk-151-puu-xxii-2024">§03 · UU PDP MATRIX (UU 27/2022 + MK 151/PUU-XXII/2024)</h2>
+
+<h3 id="3-1-core-obligations">3.1 Core Obligations</h3>
+
+<table class="doctrine-table"><thead><tr><th>Obligation</th><th>Article</th><th>Status</th><th>Action D60</th></tr></thead><tbody><tr><td>Lawful basis for processing</td><td>UU PDP Art. 20</td><td>🟡 Need explicit consent flow</td><td>Add consent checkbox at signup</td></tr><tr><td>Data Subject Rights (access, rectify, erase)</td><td>Art. 5-15</td><td>🔴 No process</td><td>Build self-service portal</td></tr><tr><td>Data Protection Impact Assessment (DPIA)</td><td>Art. 39</td><td>🔴 Not done</td><td>Create DPIA per sub-brand</td></tr><tr><td>Breach notification (≤ 72h to authority + subjects)</td><td>Art. 46</td><td>🔴 No procedure</td><td>Create runbook</td></tr><tr><td>DPO appointment</td><td>Art. 53-55 + MK 151</td><td>🔴 Not appointed</td><td><strong>D1</strong>: Haidar self-appoint</td></tr><tr><td>Cross-border transfer compliance</td><td>Art. 56</td><td>🟡 Cloudflare data residency</td><td>Document data flow map</td></tr><tr><td>Records of processing activities</td><td>Art. 22</td><td>🔴 Not maintained</td><td>Create <code>compliance/ROPA.md</code></td></tr><tr><td>Privacy Notice (Privacy Policy)</td><td>Art. 21</td><td>🟡 Draft only</td><td>Publish per subdomain</td></tr></tbody></table>
+
+<h3 id="3-2-dpo-specific-mk-151-puu-xxii-2024-expansion">3.2 DPO Specific (MK 151/PUU-XXII/2024 expansion)</h3>
+<p><strong>Putusan MK 30 Juli 2025</strong> memperluas mandate DPO — sekarang likely applicable untuk operasi fintech-scale, tanpa quantitative threshold formal.</p>
+<p><strong>Action mandatory (D1-D7)</strong>:</p>
+<ol>
+<li>✅ Letter of Appointment internal: "Haidar appointed as DPO of Oasis BI Pro and SparkMind ecosystem"</li>
+<li>✅ Setup <code>dpo@oasis-bi-pro.web.id</code> (forward ke owner inbox)</li>
+<li>✅ Publish DPO contact di:</li>
+</ol>
+<ul>
+<li>Footer semua subdomain</li>
+<li>Privacy Policy section "Contact our DPO"</li>
+<li>About page Oasis BI Pro</li>
+</ul>
+<ol>
+<li>✅ Internal log: setiap incident dicatat dengan DPO sign-off (kasus single-operator = sign-off ke diri sendiri, tetap dokumentasikan)</li>
+<li>✅ Annual DPO statement: ringkasan aktivitas tahunan untuk audit trail</li>
+</ol>
+
+<hr class="sovereign-hr">
+
+<h2 id="04-pse-kominfo-matrix-permenkominfo-5-2020">§04 · PSE KOMINFO MATRIX (Permenkominfo 5/2020)</h2>
+
+<h3 id="4-1-strategi-umbrella">4.1 Strategi Umbrella</h3>
+
+<table class="doctrine-table"><thead><tr><th>Item</th><th>Decision</th></tr></thead><tbody><tr><td>Registrant</td><td><strong>Oasis BI Pro</strong> sebagai single PSE umbrella</td></tr><tr><td>Tipe PSE</td><td>Lingkup Privat (bukan Publik)</td></tr><tr><td>Kategori</td><td>E-commerce + Financial Service (sub-category: payment intermediary)</td></tr><tr><td>Subdomain wajib dilisting</td><td>Semua 10 subdomain dari §04.1 di brand-arch doc</td></tr><tr><td>Renewal cycle</td><td>Annual</td></tr></tbody></table>
+
+<h3 id="4-2-pse-compliance-stack">4.2 PSE Compliance Stack</h3>
+<ul>
+<li>Filter konten (UU ITE) — meskipun B2B, minimum: report channel di setiap subdomain</li>
+<li>Akses lawful interception — siap diberikan ke aparat berwenang dengan court order</li>
+<li>Lokasi data center — Cloudflare global; document Singapore region sebagai primary</li>
+<li>Sistem pemantauan & pencatatan trafik — Cloudflare logs (≥ 90 hari)</li>
+</ul>
+
+<h3 id="4-3-pse-risk">4.3 PSE Risk</h3>
+<ul>
+<li>Pendaftaran ditolak karena nama brand "Oasis BI" dianggap menyerupai entitas BI → siap rename plan B <code>oasis-pro.web.id</code></li>
+<li>Subdomain SparkMind di-flag karena tidak di-list → solution: D14 update PSE listing setiap tambah subdomain</li>
+</ul>
+
+<hr class="sovereign-hr">
+
+<h2 id="05-tax-matrix-ppn-pph-pkp">§05 · TAX MATRIX (PPN, PPh, PKP)</h2>
+
+<table class="doctrine-table"><thead><tr><th>Aspect</th><th>Status</th><th>Action</th></tr></thead><tbody><tr><td>NPWP OBP</td><td>✅ Have</td><td>Sync di <code>compliance/NPWP-OBP.pdf</code></td></tr><tr><td>PKP registration (PPN)</td><td>🔴 Not yet (revenue < IDR 4.8M/year)</td><td>Monitor monthly; register saat 3 bulan berturut > IDR 400K</td></tr><tr><td>PPh 21 (employee)</td><td>❌ N/A (no employee)</td><td>N/A</td></tr><tr><td>PPh 23 (service to vendor)</td><td>🟡 PJP fee → PPh 23 berlaku?</td><td>Cek dengan konsultan pajak D30</td></tr><tr><td>e-Faktur (saat PKP)</td><td>⏳ Future</td><td>Setup Coretax integration</td></tr><tr><td>Withholding tax cross-border (Cloudflare USD invoice)</td><td>🟡 PPh 26 jika applicable</td><td>Document monthly</td></tr></tbody></table>
+
+<hr class="sovereign-hr">
+
+<h2 id="06-master-risk-register-top-20">§06 · MASTER RISK REGISTER (TOP 20)</h2>
+
+<table class="doctrine-table"><thead><tr><th>#</th><th>Risk</th><th>L</th><th>I</th><th>Score</th><th>Mitigation</th><th>Owner</th><th>Due</th></tr></thead><tbody><tr><td>1</td><td>Duitku/Xendit re-verify OBP multi-brand routing</td><td>M</td><td>H</td><td>9</td><td>Disclosure pack + B2B agreement</td><td>Haidar</td><td>D7</td></tr><tr><td>2</td><td>Customer dispute landed at SparkMind not OBP</td><td>M</td><td>M</td><td>6</td><td>Clear footer + ToS disclosure</td><td>Haidar</td><td>D5</td></tr><tr><td>3</td><td>PSE Kominfo flag unregistered subdomain</td><td>H</td><td>M</td><td>9</td><td>Register umbrella D14</td><td>Haidar</td><td>D14</td></tr><tr><td>4</td><td>UU PDP audit, no DPO appointed</td><td>M</td><td>H</td><td>9</td><td>Self-appoint DPO D1</td><td>Haidar</td><td>D1</td></tr><tr><td>5</td><td>MK 151 broader DPO mandate enforcement</td><td>M</td><td>H</td><td>9</td><td>Comply proactively</td><td>Haidar</td><td>D7</td></tr><tr><td>6</td><td>OBP name confused with Bank Indonesia</td><td>L</td><td>H</td><td>6</td><td>Disclaimer "Not affiliated with BI"</td><td>Haidar</td><td>D7</td></tr><tr><td>7</td><td>Tax PKP not registered, revenue threshold crossed silently</td><td>M</td><td>M</td><td>6</td><td>Monthly revenue dashboard</td><td>Haidar</td><td>Ongoing</td></tr><tr><td>8</td><td>Chargeback dispute internal between sub-brand & OBP</td><td>M</td><td>M</td><td>6</td><td>Internal B2B: 5% refund pool</td><td>Haidar</td><td>D14</td></tr><tr><td>9</td><td>SparkMind brand TM conflict</td><td>M</td><td>L</td><td>3</td><td>DJKI search + ® filing</td><td>Haidar</td><td>D30</td></tr><tr><td>10</td><td>Cloudflare ToS update affects payment routing</td><td>L</td><td>M</td><td>3</td><td>Quarterly ToS review</td><td>Haidar</td><td>Q-cycle</td></tr><tr><td>11</td><td>PBI 10/2025 amendment redefines merchant as PJP-C</td><td>L</td><td>H</td><td>6</td><td>Quarterly BI review + PT-ready plan</td><td>Haidar</td><td>Q-cycle</td></tr><tr><td>12</td><td>Webhook secret leak → fraudulent entitlement</td><td>L</td><td>H</td><td>6</td><td>Secret rotation + replay protection</td><td>Haidar</td><td>D5</td></tr><tr><td>13</td><td>Settlement drift undetected for > 7 days</td><td>L</td><td>H</td><td>6</td><td>Daily recon + alert > IDR 50K</td><td>Haidar</td><td>D7</td></tr><tr><td>14</td><td>API key compromise → bulk fake invoices</td><td>L</td><td>M</td><td>3</td><td>Rate limit + idempotency</td><td>Haidar</td><td>D5</td></tr><tr><td>15</td><td>Sub-brand frontend XSS leak customer PII</td><td>L</td><td>H</td><td>6</td><td>CSP headers + automated scan</td><td>Haidar</td><td>D14</td></tr><tr><td>16</td><td>Data breach → 72h notification window missed</td><td>L</td><td>H</td><td>6</td><td>Runbook + alert chain</td><td>Haidar</td><td>D7</td></tr><tr><td>17</td><td>PJP outage during peak event</td><td>M</td><td>M</td><td>6</td><td>Auto-failover Duitku ↔ Xendit</td><td>Haidar</td><td>D10</td></tr><tr><td>18</td><td>OBP single bank account frozen</td><td>L</td><td>H</td><td>6</td><td>Backup bank account + weekly drawdown</td><td>Haidar</td><td>D30</td></tr><tr><td>19</td><td>Single-operator burnout (Haidar)</td><td>M</td><td>H</td><td>9</td><td>Sprint cadence + automation-first doctrine</td><td>Haidar</td><td>Ongoing</td></tr><tr><td>20</td><td>Doctrine drift across sessions (AI context loss)</td><td>M</td><td>M</td><td>6</td><td>Quick-start paste + handoff template</td><td>Haidar</td><td>Ongoing</td></tr></tbody></table>
+<p><strong>Score legend</strong>: Likelihood × Impact (L=1, M=2, H=3) — score ≥ 6 = active mitigation required.</p>
+
+<hr class="sovereign-hr">
+
+<h2 id="07-compliance-quarterly-review-template">§07 · COMPLIANCE QUARTERLY REVIEW TEMPLATE</h2>
+
+<pre class="code lang-markdown"><code>
+# Compliance Quarterly Review — {YYYY-Qn}
+
+## 1. Regulatory Changes Since Last Review
+- BI: [changes]
+- OJK: [changes]
+- UU PDP / Kominfo: [changes]
+- Tax DJP: [changes]
+
+## 2. Risk Register Movements
+- New risks added: [#]
+- Risks closed: [#]
+- Risks elevated: [#]
+
+## 3. Incidents This Quarter
+- Total: [#]
+- P1 (data breach / payment outage): [#]
+- All notified to DPO + logged: ✅ / ❌
+
+## 4. DPO Statement
+- [Haidar self-statement of DPO activities]
+
+## 5. Actions Next Quarter
+- [list]
+
+Signed: Haidar (Owner + DPO)
+Date: YYYY-MM-DD
+</code></pre>
+
+<hr class="sovereign-hr">
+<p><strong>END OF COMPLIANCE-RISK-MATRIX v2.0</strong></p>
+<p><em>Doctrine date: 2026-05-21 · Owner: Haidar (acting DPO) · Status: CANONICAL · Execute-Ready</em></p>
+
+</section>
+
+<section class="module" id="module-6">
+
+<hr class="sovereign-hr">
+
+<h1 id="roadmap-v2-0-60-day-sprint-with-lane-obp-embedded">🗓️ ROADMAP v2.0 — 60-DAY SPRINT WITH LANE OBP EMBEDDED</h1>
+
+<h2 id="sprint-day-calendar-5-lanes-lane-obp-daily-weekly-phase-checkpoints">Sprint Day Calendar · 5 LANES + LANE OBP · Daily/Weekly/Phase Checkpoints</h2>
+<p><strong>Codename</strong>: <code>ROADMAP-OBP-D60 v2.0</code></p>
+<p><strong>Doctrine Date</strong>: 2026-05-21</p>
+<p><strong>Owner</strong>: Haidar — Sovereign AI Dev</p>
+<p><strong>Status</strong>: 🔒 CANONICAL · EXECUTE-READY</p>
+<p><strong>Supersedes</strong>: <code>ROADMAP-OBP-D60-v1.0.md</code></p>
+<p><strong>Sprint Period</strong>: 2026-05-21 → 2026-07-20 (60 hari)</p>
+<p><strong>Today</strong>: D1 / D60</p>
+
+<hr class="sovereign-hr">
+
+<h2 id="00-lane-overview">§00 · LANE OVERVIEW</h2>
+
+<table class="doctrine-table"><thead><tr><th>Lane</th><th>Theme</th><th>Weight</th></tr></thead><tbody><tr><td><strong>L1 · Brand Layer</strong></td><td>SparkMind + 4 sub-brand visual & narrative</td><td>15%</td></tr><tr><td><strong>L2 · Product Layer</strong></td><td>BarberKas, KuratorKas, PaceLokal, Nurani.OS dev</td><td>30%</td></tr><tr><td><strong>L3 · Infra & Platform</strong></td><td>Cloudflare stack, API gateway, monorepo</td><td>15%</td></tr><tr><td><strong>L4 · Growth & Community</strong></td><td>Beta tester, content, founder vow</td><td>10%</td></tr><tr><td><strong>L5 · Doctrine & Ops</strong></td><td>Documentation, handoff, governance</td><td>10%</td></tr><tr><td><strong>L6 · LANE OBP</strong> <em>(NEW v7.0)</em></td><td>Merchant-of-Record setup + compliance</td><td><strong>20%</strong></td></tr></tbody></table>
+<p><strong>LANE OBP weight increased 20%</strong> karena unblocks semua revenue path.</p>
+
+<hr class="sovereign-hr">
+
+<h2 id="01-phase-map-60-day">§01 · PHASE MAP (60-DAY)</h2>
+
+<h3 id="phase-1-foundation-d1-d14">Phase 1 · Foundation (D1–D14)</h3>
+<p><strong>Goal</strong>: OBP merchant-of-record fully operational + DPO appointed + PSE registered + first live transaction routed via OBP</p>
+
+<h3 id="phase-2-acceleration-d15-d35">Phase 2 · Acceleration (D15–D35)</h3>
+<p><strong>Goal</strong>: All 4 sub-brand checkout flows live via OBP; first 50 paying customers; weekly settlement clean</p>
+
+<h3 id="phase-3-compounding-d36-d50">Phase 3 · Compounding (D36–D50)</h3>
+<p><strong>Goal</strong>: Content/beta loop drives organic signups; monthly recurring revenue stabilized; quarterly compliance audit done</p>
+
+<h3 id="phase-4-hand-off-ready-d51-d60">Phase 4 · Hand-Off Ready (D51–D60)</h3>
+<p><strong>Goal</strong>: Full doctrine v8.0 candidates drafted; bundles archived; sprint retrospective; D90 plan locked</p>
+
+<hr class="sovereign-hr">
+
+<h2 id="02-week-by-week-plan">§02 · WEEK-BY-WEEK PLAN</h2>
+
+<h3 id="week-1-d1-d7-obp-foundation">WEEK 1 (D1–D7) · OBP FOUNDATION</h3>
+
+<table class="doctrine-table"><thead><tr><th>Day</th><th>LANE</th><th>Task</th><th>Deliverable</th></tr></thead><tbody><tr><td>D1</td><td>OBP</td><td>Self-appoint DPO + draft Letter of Appointment</td><td><code>compliance/DPO-appointment.md</code></td></tr><tr><td>D1</td><td>OBP</td><td>Setup <code>dpo@oasis-bi-pro.web.id</code> alias</td><td>Email live</td></tr><tr><td>D2</td><td>OBP</td><td>Draft Privacy Policy + ToS templates (BI/EN)</td><td><code>legal/privacy-policy.md</code> + <code>legal/tos.md</code></td></tr><tr><td>D2</td><td>L5</td><td>Lock 4-Layer Brand Architecture v2.0</td><td><code>04-brand-architecture/BRAND-ARCH-4LAYER-v2.0.md</code> ✅</td></tr><tr><td>D3</td><td>OBP</td><td>Cloudflare Workers init: <code>pay.oasis-bi-pro.web.id</code> skeleton</td><td>Worker deployed (hello-world)</td></tr><tr><td>D3</td><td>L3</td><td>Monorepo: add <code>obp-checkout</code> package</td><td>Package scaffolded</td></tr><tr><td>D4</td><td>OBP</td><td>Duitku merchant attestation update — declare multi-brand routing</td><td>Confirmation email</td></tr><tr><td>D4</td><td>OBP</td><td>Disclosure footer locked template → deploy ke semua subdomain</td><td>Footer live</td></tr><tr><td>D5</td><td>OBP</td><td>Invoice API contract finalized (<code>POST /v1/invoices</code>)</td><td>OpenAPI spec committed</td></tr><tr><td>D5</td><td>OBP</td><td>Webhook HMAC verification implemented</td><td>Unit tests pass</td></tr><tr><td>D6</td><td>OBP</td><td>Internal B2B agreement template signed (Haidar to Haidar, audit-trail)</td><td><code>legal/MoR-B2B-{brand}.md</code> × 4</td></tr><tr><td>D6</td><td>L5</td><td>Publish DPO contact + Privacy Policy di SparkMind + OBP</td><td>Live pages</td></tr><tr><td>D7</td><td>OBP</td><td>First end-to-end test: dummy BarberKas → OBP → Duitku → settle → entitlement</td><td>E2E test pass</td></tr></tbody></table>
+<p><strong>Week 1 exit</strong>: ✅ DPO appointed · ✅ Disclosure live · ✅ OBP checkout skeleton · ✅ E2E test pass</p>
+
+<h3 id="week-2-d8-d14-integration-pse">WEEK 2 (D8–D14) · INTEGRATION + PSE</h3>
+
+<table class="doctrine-table"><thead><tr><th>Day</th><th>LANE</th><th>Task</th><th>Deliverable</th></tr></thead><tbody><tr><td>D8</td><td>OBP</td><td>PSE Kominfo submission — umbrella under OBP</td><td>Submission receipt</td></tr><tr><td>D8</td><td>L2</td><td>BarberKas: integrate OBP checkout SDK</td><td>Checkout flow live (staging)</td></tr><tr><td>D9</td><td>L2</td><td>KuratorKas: integrate OBP checkout SDK</td><td>Checkout flow live (staging)</td></tr><tr><td>D9</td><td>L2</td><td>PaceLokal (RLO): integrate OBP checkout SDK</td><td>Checkout flow live (staging)</td></tr><tr><td>D10</td><td>L2</td><td>Nurani.OS: integrate OBP checkout SDK</td><td>Checkout flow live (staging)</td></tr><tr><td>D10</td><td>L3</td><td>API gateway: rate limiting + idempotency middleware</td><td>Middleware deployed</td></tr><tr><td>D11</td><td>OBP</td><td>Reconciliation job (daily 02:00 WIB)</td><td>Job scheduled</td></tr><tr><td>D11</td><td>OBP</td><td>Settlement dashboard MVP (admin.oasis-bi-pro.web.id)</td><td>Dashboard live</td></tr><tr><td>D12</td><td>OBP</td><td>DPIA per sub-brand drafted</td><td>4 × DPIA docs</td></tr><tr><td>D12</td><td>L4</td><td>Beta tester longlist (50 names)</td><td><code>Doc-P1-Beta-Tester-Longlist-v1.1.md</code></td></tr><tr><td>D13</td><td>OBP</td><td>Xendit secondary integration</td><td>Xendit live as failover</td></tr><tr><td>D13</td><td>L2</td><td>All 4 sub-brands checkout flow → production toggle</td><td>Production checkout enabled</td></tr><tr><td>D14</td><td>OBP</td><td><strong>MILESTONE: First LIVE transaction across all 4 sub-brands</strong></td><td>4 successful charges</td></tr><tr><td>D14</td><td>L5</td><td>Week 2 retrospective + doctrine drift check</td><td>Retrospective doc</td></tr></tbody></table>
+<p><strong>Week 2 exit</strong>: ✅ PSE submitted · ✅ All 4 sub-brand checkout live · ✅ First live transactions · ✅ Recon dashboard</p>
+
+<h3 id="week-3-d15-d21-acceleration">WEEK 3 (D15–D21) · ACCELERATION</h3>
+
+<table class="doctrine-table"><thead><tr><th>Day</th><th>LANE</th><th>Task</th></tr></thead><tbody><tr><td>D15-D17</td><td>L4</td><td>Open beta to longlist · onboarding emails · Founder Vow X thread</td></tr><tr><td>D15-D21</td><td>L2</td><td>Bug bash from beta; iterate UX</td></tr><tr><td>D18</td><td>OBP</td><td>First settlement reconciliation report (real numbers)</td></tr><tr><td>D19</td><td>L3</td><td>Audit log + R2 archive of all <code>/invoices</code> writes</td></tr><tr><td>D20</td><td>OBP</td><td>Refund flow + 2-step approval</td></tr><tr><td>D21</td><td>L5</td><td><strong>Phase 1 wrap retrospective</strong> · Phase 2 kickoff</td></tr></tbody></table>
+
+<h3 id="week-4-d22-d28-growth-loop">WEEK 4 (D22–D28) · GROWTH LOOP</h3>
+<ul>
+<li>Content cadence: 3 posts/week per sub-brand (40% educational, 30% case study, 30% sovereign narrative)</li>
+<li>KuratorKas + BarberKas partnership push (5 pilot operators each)</li>
+<li>PaceLokal first race registration event (Q3 2026 5K)</li>
+<li>Nurani.OS membership early-bird pricing</li>
+</ul>
+
+<h3 id="week-5-d29-d35-stabilize">WEEK 5 (D29–D35) · STABILIZE</h3>
+<ul>
+<li>Monthly settlement clean (target: 0 unmatched > 24h)</li>
+<li>50 paying customers cumulative</li>
+<li>Quarterly compliance review #1 (mini, since only 1 month live)</li>
+<li>Beta NPS survey</li>
+</ul>
+
+<h3 id="week-6-d36-d42-content-compound">WEEK 6 (D36–D42) · CONTENT COMPOUND</h3>
+<ul>
+<li>Sovereign Tracker (RLO Tech Spec) MVP demo</li>
+<li>3 case studies published (1 per active sub-brand)</li>
+<li>First MRR milestone (target: IDR 5M/month)</li>
+</ul>
+
+<h3 id="week-7-d43-d49-expand">WEEK 7 (D43–D49) · EXPAND</h3>
+<ul>
+<li>Plugin marketplace concept (Cloudflare Workers as runtime)</li>
+<li>Cross-brand customer journey (e.g., KuratorKas customer → Nurani.OS membership offer)</li>
+<li>DPO quarterly statement #1 published</li>
+</ul>
+
+<h3 id="week-8-d50-d56-optimize">WEEK 8 (D50–D56) · OPTIMIZE</h3>
+<ul>
+<li>Performance: p95 checkout latency < 1.5s</li>
+<li>Refund pool reconciliation: 0 drift</li>
+<li>Tax: assess PKP threshold; if crossed, start registration</li>
+<li>Doctrine v8.0 brainstorm (cross-border? PJSP-C? PT formal?)</li>
+</ul>
+
+<h3 id="week-9-d57-d60-hand-off">WEEK 9 (D57–D60) · HAND-OFF</h3>
+<ul>
+<li>D57: Full doctrine review + DIFF v7.0 → v8.0 candidate</li>
+<li>D58: Sprint retrospective + KPI summary</li>
+<li>D59: Archive bundle v2.0 → <code>v2.0-frozen.zip</code></li>
+<li>D60: D90 plan locked + new SESSION-HANDOFF v3.0 published</li>
+</ul>
+
+<hr class="sovereign-hr">
+
+<h2 id="03-kpi-dashboard">§03 · KPI DASHBOARD</h2>
+
+<table class="doctrine-table"><thead><tr><th>Pillar</th><th>D0 (Today)</th><th>D14</th><th>D30</th><th>D60</th></tr></thead><tbody><tr><td><strong>OBP MoR Pillar</strong></td><td>60/100</td><td>80/100</td><td>88/100</td><td><strong>92/100 🟢</strong></td></tr><tr><td><strong>DPO + UU PDP</strong></td><td>10/100</td><td>70/100</td><td>85/100</td><td><strong>95/100 🟢</strong></td></tr><tr><td><strong>PSE Registration</strong></td><td>0/100</td><td>50/100 (submitted)</td><td>80/100 (approved)</td><td><strong>100/100 🟢</strong></td></tr><tr><td><strong>Disclosure Footer</strong></td><td>30/100</td><td>100/100</td><td>100/100</td><td><strong>100/100 🟢</strong></td></tr><tr><td><strong>Cross-Brand Routing</strong></td><td>0/100</td><td>70/100</td><td>90/100</td><td><strong>95/100 🟢</strong></td></tr><tr><td><strong>Settlement Recon</strong></td><td>0/100</td><td>50/100</td><td>70/100</td><td><strong>85/100 🟢</strong></td></tr><tr><td><strong>Brand Asset Inventory</strong></td><td>40/100</td><td>60/100</td><td>80/100</td><td><strong>95/100 🟢</strong></td></tr><tr><td><strong>Paying Customers</strong></td><td>0</td><td>5</td><td>25</td><td><strong>75+</strong></td></tr><tr><td><strong>MRR (IDR)</strong></td><td>0</td><td>250K</td><td>2.5M</td><td><strong>8M+</strong></td></tr></tbody></table>
+
+<hr class="sovereign-hr">
+
+<h2 id="04-daily-operating-rhythm">§04 · DAILY OPERATING RHYTHM</h2>
+
+<table class="doctrine-table"><thead><tr><th>Time (WIB)</th><th>Activity</th></tr></thead><tbody><tr><td>06:00</td><td>Inbox + dashboard scan (10 min)</td></tr><tr><td>06:30</td><td>Doctrine paste + sprint day load (5 min)</td></tr><tr><td>07:00</td><td>LANE primary block (3h focused)</td></tr><tr><td>10:00</td><td>LANE secondary block (2h)</td></tr><tr><td>13:00</td><td>Customer/community reply window (1h)</td></tr><tr><td>14:00</td><td>LANE tertiary / ad-hoc (2h)</td></tr><tr><td>16:00</td><td>OBP settlement check + recon (15 min)</td></tr><tr><td>17:00</td><td>Daily log + tomorrow's top-3 lock (15 min)</td></tr><tr><td>Evening</td><td>Optional research / content / community</td></tr></tbody></table>
+
+<hr class="sovereign-hr">
+
+<h2 id="05-critical-path-blocking">§05 · CRITICAL PATH (BLOCKING)</h2>
+<p>If ANY of these slip → entire sprint at risk:</p>
+<ol>
+<li><strong>D1 DPO appointment</strong> — without this, every day under UU PDP audit risk</li>
+<li><strong>D7 E2E payment test</strong> — without this, can't go live with real customers</li>
+<li><strong>D8 PSE submission</strong> — without this, every transaction technical violation</li>
+<li><strong>D14 Cross-brand checkout live</strong> — without this, no revenue unblocked</li>
+<li><strong>D30 First clean settlement</strong> — without this, can't trust ledger</li>
+<li><strong>D60 D90 plan locked</strong> — without this, Phase 5 chaos</li>
+</ol>
+
+<hr class="sovereign-hr">
+
+<h2 id="06-rollback-plan-if-obp-mor-fails">§06 · ROLLBACK PLAN (IF OBP MOR FAILS)</h2>
+<p>If at D14 the OBP-MoR pattern is rejected by Duitku/Xendit:</p>
+<ol>
+<li><strong>Plan B1</strong>: Push direct verification of SparkMind itself (parallel filing) — accept 60-day delay</li>
+<li><strong>Plan B2</strong>: Pivot to international MoR (Paddle for international + manual local for IDR)</li>
+<li><strong>Plan B3</strong>: Form PT formal under "PT SparkMind Indonesia" — incur cost + delay, but clean future</li>
+</ol>
+<p><strong>Decision tree</strong> documented at <code>compliance/OBP-rollback-plan.md</code>.</p>
+
+<hr class="sovereign-hr">
+<p><strong>END OF ROADMAP-OBP-D60 v2.0</strong></p>
+<p><em>Doctrine date: 2026-05-21 · Owner: Haidar · Status: CANONICAL · Execute-Ready</em></p>
+
+</section>
+
+  <footer class="footer">
+    <div class="seal">⚜</div>
+    <div>SPARKMIND-OBP-HYBRID-MASTER-BUNDLE v2.0</div>
+    <div>Doctrine Date: 2026-05-21 · Supersedes v1.0 (2026-05-19)</div>
+    <div style="margin-top:14px;">
+      <em>Sovereign sigil. Doctrine lock. Execute now.</em>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
